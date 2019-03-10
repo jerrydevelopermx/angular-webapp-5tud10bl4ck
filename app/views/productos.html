@@ -1,0 +1,62 @@
+<style>
+
+
+.label {
+  padding: 30px 5px;
+
+}
+
+md-pagination-wrapper {
+    height: 100px;
+}
+
+.partners-tabs .md-tab {
+  max-width: 350px!important;
+  padding:0px !important;
+}
+md-tab-item {
+    width: 350px
+}
+
+
+
+.label.md-button{
+  color:red !important
+}
+</style>
+<div flex layout="column">
+  <div id="{{$ctrl.productos.description.id}}" class="{{$ctrl.productos.description.class}}">{{$ctrl.productos.description.text}}</div>
+    <md-content>
+      <md-tabs md-center-tabs="true" class="partners-tabs" md-dynamic-height="true" md-border-bottom md-selected="$ctrl.tabSelectedIndex">
+        <md-tab ng-repeat="tab in $ctrl.productos.tabs">
+          <md-tab-label>
+            <md-button class="tab-button">
+              <img src="{{tab.img}}" class="png-icon">
+            </md-button>
+          </md-tab-label>
+          <md-tab-body>
+
+            <div layout="row" ng-show="tab.navbar!=null">
+              <md-sidenav md-is-locked-open="true" class="sidebarleft">
+                <div class="label" ng-repeat="(key, value) in tab.navbar" ng-click="$ctrl.activeTab=$index" ng-class="{'active': activeTab===$index}" layout="column" layout-align="center center">
+                  <md-button ng-class="{'selected-button':$ctrl.activeTab==$index}">{{value}}</md-button>
+                </div>
+              </md-sidenav>
+              <md-content layout-padding flex class="content">
+          		    <div class="tab" ng-repeat="item in tab.items" ng-show="$ctrl.activeTab==$index">
+                    <app-content-grid style="grid.class" title="grid.type" data="grid.imgs" ng-repeat="grid in item.grids"></app-content-grid>
+                  </div>
+              </md-content>
+            </div>
+
+            <div layout="column" ng-show="tab.navbar==null">
+              <app-content-grid style="grid.class" title="grid.type" data="grid.imgs" ng-repeat="grid in tab.items"></app-content-grid>
+            </div>
+
+
+          </md-tab-body>
+        </md-tab>
+      </md-tabs>
+    </md-content>
+
+</div>

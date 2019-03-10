@@ -1,0 +1,16 @@
+<div flex layout="column" layout-md="column" layout-xs="column">
+<ui-carousel
+  slides="$ctrl.images"
+  arrows=false
+  slides-to-show="1"
+  slides-to-scroll="1"
+  initial-slide="1"
+  autoplay="true"
+  autoplay-speed="3000"
+  dots="true">
+
+  <carousel-item>
+    <div class="image"><img src="{{ item }}" width="100%"></div>
+  </carousel-item>
+</ui-carousel>
+</div>

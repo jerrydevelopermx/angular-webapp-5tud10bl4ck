@@ -1,0 +1,48 @@
+<!doctype html>
+<html ng-app="webApp">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="images/favicon.ico">
+        <title>STUDIO BLACK JEANS</title>
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script src="bower_components/angular-route/angular-route.min.js"></script>
+        <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+        <script src="bower_components/angular-messages/angular-messages.min.js"></script>
+        <script src="bower_components/angular-material/angular-material.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+        <script src="bower_components/angular-simple-logger/dist/angular-simple-logger.min.js"></script>
+        <script src="bower_components/lodash/dist/lodash.min.js"></script>
+        <script src="bower_components/angular-ui-carousel/dist/ui-carousel.min.js"></script>
+
+        <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+        <link rel="stylesheet" href="bower_components/angular-ui-carousel/dist/ui-carousel.min.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/style.css">
+
+        <script src="scripts/app.js"></script>
+        <script src="scripts/app.routes.js"></script>
+        <script src="scripts/components/common/header.js"></script>
+        <script src="scripts/components/common/footer.js"></script>
+        <script src="scripts/components/common/menu.js"></script>
+        <script src="scripts/components/common/gallery.js"></script>
+        <script src="scripts/components/common/element-content.js"></script>
+        <script src="scripts/components/common/content-n-cols.js"></script>
+        <script src="scripts/components/common/content-grid.js"></script>
+        <script src="scripts/components/common/content-n-cols-rows.js"></script>
+
+        <script src="scripts/components/main.js"></script>
+        <script src="scripts/components/nosotros.js"></script>
+        <script src="scripts/components/contacto.js"></script>
+        <script src="scripts/components/productos.js"></script>
+        <script src="scripts/components/servicios.js"></script>
+
+    </head>
+    <body ng-cloak layout="column">
+        <app-menu></app-menu>
+        <div ui-view></div>
+        <footer-comp></footer-comp>
+    </body>
+</html>

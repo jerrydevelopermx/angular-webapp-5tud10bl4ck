@@ -1,0 +1,9 @@
+<div ng-repeat="c in $ctrl.data.content" ng-class="{'centered': $ctrl.data.centered }">
+  <li ng-if="c.elementType === 'icon'" class="{{c.class}}"></li>
+  <p ng-if="c.elementType === 'p'" class="{{c.class}}">{{c.text}}</p>
+  <img ng-if="c.elementType === 'img'" src="{{c.src}}" class="{{c.class}}"/>
+  <ul ng-if="c.elementType === 'ul'" class="{{c.class}}">
+    <li ng-repeat="l in c.list"><a class="{{l.class}}" href="{{l.url}}">{{l.label}}</a></li>
+  </ul>
+  <div id="{{c.id}}" class="{{c.id}}" ng-if="c.elementType === 'component'"></div>
+</div>

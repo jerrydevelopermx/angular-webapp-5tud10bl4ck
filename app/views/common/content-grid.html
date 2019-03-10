@@ -1,0 +1,20 @@
+<div flex layout="column" class="{{$ctrl.data.class}}">
+  <md-content layout-padding>
+    <div ng-if="$ctrl.title != null" flex layout="column" layout-md="column" layout-xs="column">
+      <h4 class="{{$ctrl.style}}">{{$ctrl.title}}</h4>
+    </div>
+    <md-grid-list
+        md-cols="3"
+        md-cols-xs="1"
+        md-gutter="10px"
+        md-row-height="3:3"
+        md-row-height-xs="3:2">
+
+      <md-grid-tile
+          ng-repeat="tile in $ctrl.data"
+          ng-style="{ 'background': tile.color }">
+        <a href="{{tile.url}}"><img src="images/{{tile.img}}.png" class="{{tile.class}}"></a>
+      </md-grid-tile>
+    </md-grid-list>
+  </md-content>
+</div>

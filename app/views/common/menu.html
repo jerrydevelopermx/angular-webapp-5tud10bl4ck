@@ -1,0 +1,32 @@
+<div flex layout="column" class="menu-bar">
+ <md-content flex layout="row">
+   <div class="logo" id="logo-div"></div>
+    <md-nav-bar flex md-selected-nav-item="$ctrl.currentNav" hide-xs hide-sm hide-md>
+     <md-nav-item md-nav-href="#!/" name="home">Inicio</md-nav-item>
+     <md-nav-item md-nav-href="#!/" name="mujeres">Mujeres</md-nav-item>
+     <md-nav-item md-nav-href="#!/" name="hombres">Hombres</md-nav-item>
+     <md-nav-item md-nav-href="#!/" name="inspirate">Inspírate</md-nav-item>
+     <md-nav-item md-nav-href="#!/" name="tiendas">Tiendas</md-nav-item>
+   </md-nav-bar>
+   <md-nav-bar flex show-xs hide-lg hide-md>
+     <md-button ng-click="$ctrl.toggleRight()" ng-hide="$ctrl.isOpenRight()" class="icon fa-bars sidemenu">
+     </md-button>
+   </md-nav-bar>
+</md-content>
+
+
+<md-sidenav class="md-sidenav-right md-whiteframe-4dp" md-component-id="right">
+  <md-content layout-padding>
+    <ul class="ul-side">
+        <li><a href="#!/" ng-click="$ctrl.menuClicked()">Inicio</a></li>
+        <li><a href="#!/" ng-click="$ctrl.menuClicked()">Mujeres</a></li>
+        <li><a href="#!/" ng-click="$ctrl.menuClicked()">Hombres</a></li>
+        <li><a href="#!/" ng-click="$ctrl.menuClicked()">Inspírate</a></li>
+        <li><a href="#!/" ng-click="$ctrl.menuClicked()">Tiendas</a></li>
+    </ul>
+      <!-- <md-button ng-click="close()" class="md-primary">
+      Close Sidenav Right
+    </md-button>-->
+  </md-content>
+</md-sidenav>
+</div>
