@@ -154,7 +154,11 @@ md-nav-bar .md-button._md-nav-button.md-unselected {
 
 
 md-nav-bar .md-button.md-accent {
-    color: #fff;
+    color: #cbdcdf;
+}
+
+md-nav-bar md-nav-ink-bar{
+  background-color: #cbdcdf;
 }
 
 md-nav-bar {
@@ -172,7 +176,7 @@ md-nav-bar .md-nav-bar {
       font-size: 20pt;
 }
 .sidemenu.md-button{
-  font-size: 35px;
+  font-size: 28px;
   margin: 20px 38px 6px 38px;
 }
 .blue-background {
@@ -337,4 +341,8 @@ ul.footer-list a {
 }
 ul.footer-list a:hover {
   text-decoration: underline;
+}
+
+.selected-item{
+    font-weight: bolder;
 }
