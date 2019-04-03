@@ -63,22 +63,22 @@
                                     elementType: 'ul',
                                     class: 'icons',
                                     list: [{
-                                              url:'https://www.facebook.com/DAEN-SA-De-CV-364636657018087/',
+                                              url:'https://www.facebook.com/StudioBlackJeans/',
                                               label: '',
                                               class:'icon rounded medium fa-facebook'
                                             },
                                             {
-                                              url: 'https://twitter.com/DaenCopiadoras',
+                                              url: '',
                                               label:'',
                                               class: 'icon rounded medium fa-twitter'
                                             },
                                             {
-                                              url: 'https://twitter.com/DaenCopiadoras',
+                                              url: '',
                                               label:'',
                                               class: 'icon rounded medium fa-youtube'
                                             },
                                             {
-                                              url: 'https://twitter.com/DaenCopiadoras',
+                                              url: 'https://instagram.com/studioblack.jeans',
                                               label:'',
                                               class: 'icon rounded medium fa-instagram'
                                             }

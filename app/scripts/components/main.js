@@ -163,9 +163,19 @@
                             class: 'content-column',
                             centered: true,
                             content: [{
+                                       elementType: 'img',
+                                       src: 'images/shop.png',
+                                       class: ''
+                                     },
+                                     {
                                        elementType: 'p',
-                                       class: 'justified',
-                                       text: 'Ubicación 1'
+                                       class: '',
+                                       text: 'Nombre del lugar'
+                                     },
+                                     {
+                                       elementType: 'p',
+                                       class: '',
+                                       text: 'Dirección completa del lugar, colonia, calle'
                                      }]
                           },
                           {
@@ -173,10 +183,20 @@
                             class: 'content-column',
                             centered: true,
                             content: [{
-                                        elementType: 'p',
-                                        class: 'justified',
-                                        text: 'Ubicación 2'
-                                      }]
+                                       elementType: 'img',
+                                       src: 'images/shop.png',
+                                       class: ''
+                                     },
+                                     {
+                                       elementType: 'p',
+                                       class: '',
+                                       text: 'Nombre del lugar'
+                                     },
+                                     {
+                                       elementType: 'p',
+                                       class: '',
+                                       text: 'Dirección completa del lugar, colonia, calle'
+                                     }]
                             }],
                   bottom :null
           };

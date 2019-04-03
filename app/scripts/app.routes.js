@@ -38,12 +38,16 @@ function routes ($stateProvider, $urlRouterProvider) {
                     publicPage: true
                 })
 
-                .state('catalogo', {
-                    url: '/catalogo',
+                .state('catalogoMujer', {
+                    url: '/mujeres',
                     component: 'appCatalogo',
                     publicPage: true
                 })
-
+                .state('catalogoHombre', {
+                    url: '/hombres',
+                    component: 'appCatalogo',
+                    publicPage: true
+                })
                 .state('inspirate', {
                     url: '/inspirate',
                     component: 'appInspirate',
