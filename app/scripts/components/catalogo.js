@@ -2,11 +2,11 @@
     'use strict';
     angular.module('webApp')
 
-    .component('appNosotros', {
+    .component('appCatalogo', {
         bindings: {
           data: '<',
         },
-        templateUrl: 'views/nosotros.html',
+        templateUrl: 'views/catalogo.html',
         controller: componentController
       })
 
@@ -49,7 +49,7 @@
                       content: [{
                                  elementType: 'img',
                                  src: 'images/nosotros-img-01.png',
-                                 class: 'cols-img'
+                                 class: ''
                                }]
                     }]
           };
@@ -66,7 +66,7 @@
                 content: [{
                            elementType: 'img',
                            src: 'images/nosotros-img-02.png',
-                           class: 'cols-img'
+                           class: ''
                          }]
                        },
                        {

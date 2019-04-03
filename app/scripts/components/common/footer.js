@@ -80,7 +80,7 @@
                                             {
                                               url: 'https://twitter.com/DaenCopiadoras',
                                               label:'',
-                                              class: 'icon rounded medium fa-pinterest'
+                                              class: 'icon rounded medium fa-instagram'
                                             }
                                           ]
 

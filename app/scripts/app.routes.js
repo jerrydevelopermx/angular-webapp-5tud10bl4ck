@@ -25,31 +25,29 @@ function routes ($stateProvider, $urlRouterProvider) {
                     component: 'appContacto',
                     publicPage: true
                 })
-                .state('productos', {
-                    url: '/productos',
-                    component: 'appProductos',
-                    publicPage: true
-                })
-                .state('partner', {
-                    url: '/productos/:partner',
-                    component: 'appProductos',
+
+                .state('mayoreo', {
+                    url: '/mayoreo',
+                    component: 'appMayoreo',
                     publicPage: true
                 })
 
-                .state('servicios', {
-                    url: '/servicios',
-                    component: 'appServicios',
-                    publicPage: true
-                })
-                .state('detalleServicio', {
-                    url: '/servicios/:servicio',
-                    component: 'appServicios',
+                .state('guia', {
+                    url: '/guia',
+                    component: 'appGuia',
                     publicPage: true
                 })
 
-                .state('soporte', {
-                    url: '/soporte',
-                    component: 'appSoporte',
+                .state('catalogo', {
+                    url: '/catalogo',
+                    component: 'appCatalogo',
+                    publicPage: true
+                })
+
+                .state('inspirate', {
+                    url: '/inspirate',
+                    component: 'appInspirate',
                     publicPage: true
                 });
+
 }
