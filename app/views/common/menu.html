@@ -18,12 +18,12 @@
 <md-sidenav class="md-sidenav-right md-whiteframe-4dp" md-component-id="right">
   <md-content layout-padding>
     <ul class="ul-side">
-        <li><a href="#!/" ng-click="$ctrl.menuClicked()">Inicio</a></li>
-        <li><a href="#!/mujeres" ng-click="$ctrl.menuClicked()">Mujeres</a></li>
-        <li><a href="#!/hombres" ng-click="$ctrl.menuClicked()">Hombres</a></li>
-        <li><a href="#!/inspirate" ng-click="$ctrl.menuClicked()">Inspírate</a></li>
-        <li><a href="#!/guia" ng-click="$ctrl.menuClicked()">Guia de tallas</a></li>
-        <li><a href="#!/mayoreo" ng-click="$ctrl.menuClicked()">Venta Mayoreo</a></li>
+        <li><a href="#!/" ng-class="{'leftnavbar-selected': $ctrl.currentNav == 'home' || $ctrl.currentNav == ''}" ng-click="$ctrl.menuClicked()">Inicio</a></li>
+        <li><a href="#!/mujeres" ng-class="{'leftnavbar-selected': $ctrl.currentNav == 'mujeres' }" ng-click="$ctrl.menuClicked()">Mujeres</a></li>
+        <li><a href="#!/hombres" ng-class="{'leftnavbar-selected': $ctrl.currentNav == 'hombres' }" ng-click="$ctrl.menuClicked()">Hombres</a></li>
+        <li><a href="#!/inspirate" ng-class="{'leftnavbar-selected': $ctrl.currentNav == 'inspirate' }" ng-click="$ctrl.menuClicked()">Inspírate</a></li>
+        <li><a href="#!/guia" ng-class="{'leftnavbar-selected': $ctrl.currentNav == 'guia' }" ng-click="$ctrl.menuClicked()">Guia de tallas</a></li>
+        <li><a href="#!/mayoreo" ng-class="{'leftnavbar-selected': $ctrl.currentNav == 'mayoreo' }" ng-click="$ctrl.menuClicked()">Venta Mayoreo</a></li>
     </ul>
       <!-- <md-button ng-click="close()" class="md-primary">
       Close Sidenav Right

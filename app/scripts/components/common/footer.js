@@ -42,17 +42,12 @@
                                           },
                                           {
                                             label:'Guía de tallas',
-                                            url:'#!/'
+                                            url:'#!/guia'
                                           },
                                           {
                                             label:'Venta a mayoreo',
-                                            url:'#!/'
-                                          },
-                                          {
-                                            label:'Contacto',
-                                            url:'#!/'
-                                          }
-                                          ]
+                                            url:'#!/mayoreo'
+                                          }]
                                 }]
                       },
                       { title: 'Novedades, productos y promociones. ¡Entérate!',
@@ -66,16 +61,6 @@
                                               url:'https://www.facebook.com/StudioBlackJeans/',
                                               label: '',
                                               class:'icon rounded medium fa-facebook'
-                                            },
-                                            {
-                                              url: '',
-                                              label:'',
-                                              class: 'icon rounded medium fa-twitter'
-                                            },
-                                            {
-                                              url: '',
-                                              label:'',
-                                              class: 'icon rounded medium fa-youtube'
                                             },
                                             {
                                               url: 'https://instagram.com/studioblack.jeans',

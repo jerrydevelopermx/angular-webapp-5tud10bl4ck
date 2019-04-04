@@ -22,7 +22,7 @@
                             },
                       description: {
                               text: 'Jeans que se adaptan a tus movimientos, ya sea en un viaje o la oficina.',
-                              class: 'content-column'
+                              class: 'content-column centered'
                             },
                       columns: [{
                                 title: '',
@@ -31,7 +31,7 @@
                                 content: [{
                                            elementType: 'img',
                                            src: 'images/home-img-01.png',
-                                           class: ''
+                                           class: 'main-img'
                                          }]
                               },
                               {
@@ -41,7 +41,7 @@
                                 content: [{
                                            elementType: 'img',
                                            src: 'images/home-img-02.png',
-                                           class: ''
+                                           class: 'main-img'
                                          }]
                               },
                               {
@@ -51,7 +51,7 @@
                                 content: [{
                                            elementType: 'img',
                                            src: 'images/home-img-03.jpg',
-                                           class: ''
+                                           class: 'main-img'
                                          }]
                               }],
                       bottom :null
@@ -71,7 +71,7 @@
                       content: [{
                                  elementType: 'img',
                                  src: 'images/home-img-04@2x.png',
-                                 class: ''
+                                 class: 'main-img'
                                }]
                     },
                     {
@@ -81,7 +81,7 @@
                       content: [{
                                  elementType: 'img',
                                  src: 'images/home-img-05@2x.png',
-                                 class: ''
+                                 class: 'main-img'
                                }]
                     },
                     {
@@ -91,7 +91,7 @@
                       content: [{
                                  elementType: 'img',
                                  src: 'images/home-img-06@2x.png',
-                                 class: ''
+                                 class: 'main-img'
                                }]
                     },
                     {
@@ -101,7 +101,7 @@
                       content: [{
                                  elementType: 'img',
                                  src: 'images/home-img-07@2x.png',
-                                 class: ''
+                                 class: 'main-img'
                                }]
                     }],
               bottom : {
@@ -112,7 +112,7 @@
                             list: [{
                                       label:'Ver más',
                                       class:'button medium',
-                                      url:'#!/'
+                                      url:'#!/mujeres'
                                   }]
 
                           }]
@@ -132,7 +132,7 @@
                             centered: true,
                             content: [{
                                        elementType: 'p',
-                                       class: 'justified',
+                                       class: 'centered',
                                        text: 'Jeans que se adaptan a tus movimientos, ya sea en un viaje o la oficina.'
                                      }]
                           }],

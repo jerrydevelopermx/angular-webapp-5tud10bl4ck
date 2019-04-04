@@ -16,7 +16,7 @@ body {
         font-size: 11pt;
     }
     .content-column {
-      padding: 30px;
+      padding: 20px;
       margin:10px;
       /*border:1px solid;*/
     }
@@ -27,7 +27,7 @@ body {
       margin:10px;
     }
     img.producto {
-      height: 285px;
+      width: 230px;
     }
     img.zebra {
       height: 200px;
@@ -37,6 +37,10 @@ body {
     }
     img.logo-partner {
        width: 150px;
+    }
+
+    img.main-img{
+
     }
 
     .png-icon {
@@ -89,7 +93,7 @@ body {
         font-size: 14pt;
     }
     .content-column {
-      padding: 15px;
+      padding: 5px;
       margin:5px;
       /*border:1px solid;*/
     }
@@ -101,7 +105,8 @@ body {
     }
 
     img.producto {
-      height: 100px;
+      width: 100px;
+      padding:5px;
     }
     img.zebra {
       height: 150px;
@@ -141,6 +146,9 @@ body {
     h4.grid-title  {
       font-size: 14px;
     }
+    img.main-img{
+      width: 300px;
+    }
 }
 
 md-sidenav.md-default-theme, md-sidenav, md-sidenav.md-default-theme md-content, md-sidenav md-content {
@@ -175,6 +183,11 @@ md-nav-bar .md-nav-bar {
       border: 0px;
       font-size: 20pt;
 }
+
+.leftnavbar-selected {
+  color: #cbdcdf !important;
+}
+
 .sidemenu.md-button{
   font-size: 28px;
   margin: 20px 38px 6px 38px;
@@ -338,9 +351,11 @@ ul.footer-list{
 
 ul.footer-list a {
   text-decoration: none;
+  color:#fff;
 }
 ul.footer-list a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  color: #cbdcdf;
 }
 
 .selected-item{
