@@ -59,10 +59,10 @@
                             }];
         }
 
-        function getImgs(data){
+        function getImgs(data){ console.log(data)
           var imgs = [];
           for(var i in data){
-            imgs.push({color : '#fff', img: data[i].front_image, url:'', class: 'producto', text: data[i].code});
+            imgs.push({backgroundColor : '#fff', img: data[i].front_image, url:'', class: 'producto', code: data[i].code, price: data[i].price, color: data[i].color, sizes : '5, 7, 9, 11' });
           }
           return imgs;
         }
