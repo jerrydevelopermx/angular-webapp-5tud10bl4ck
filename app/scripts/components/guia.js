@@ -12,7 +12,7 @@
 
       function componentController($scope,$anchorScroll,$location){
         var vm = this;
-
+        vm.galleryParent = 'tallas';
         function anchorScroll(){
           var newHash = 'logo-div';
               if ($location.hash() !== newHash) {

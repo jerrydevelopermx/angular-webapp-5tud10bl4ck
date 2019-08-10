@@ -4,21 +4,36 @@
 
     .component('appGallery', {
         bindings: {
-          data: '<',
+          parent: '=',
         },
         templateUrl: 'views/common/gallery.html',
         controller: componentController
     })
 
-      function componentController($scope){
+      function componentController($scope, Requester){
         var vm = this;
+        vm.images = [];
+        vm.showCarousel = false;
 
         vm.$onInit = function(){
-          vm.images = ["images/galeria-01.png",
-                       "images/galeria-02.png"
-                      ];
+          Requester.get('catalog/galleries/' + vm.parent, {}).then(function(data){ 
+              vm.images = processGallery(data);
+            }, function(error){
+                console.log(error)
+            })
+        }
 
+        vm.$doCheck = function() {
+          if(vm.images.length > 0 && !vm.showCarousel){
+            vm.showCarousel = true;
           }
+        }
+
+        function processGallery(data) {
+          return data.map(function (image, index, array) {
+              return image.src;
+          });
+        }
 
       }
 })();

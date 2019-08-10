@@ -1,7 +1,4 @@
 <div flex layout="column" layout-md="column" layout-xs="column">
-  <div class="image">
-    <img src="images/banner.png" width="100%">
-  </div>
-  <catalogo-comp></catalogo-comp>
-
+  <app-gallery parent="$ctrl.type"></app-gallery>
+  <catalogo-comp type="$ctrl.type"></catalogo-comp>
 </div>

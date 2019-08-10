@@ -13,11 +13,11 @@
       <md-grid-tile
           ng-repeat="tile in $ctrl.data"
           ng-style="{ 'background': tile.color }">
-        <a href="{{tile.url}}"><img src="images/{{tile.img}}.png" class="{{tile.class}}"></a>
-        <div style="position: absolute;bottom:0">{{tile.text}}</div>
-        <!--<md-grid-tile-footer>
-          <h5>Nombre del producto</h5>
-        </md-grid-tile-footer>-->
+        <a href="{{tile.url}}"><img ng-src="{{tile.img}}"></a>
+        <!--<div style="position: absolute;bottom:0"></div>-->
+        <md-grid-tile-footer>
+          <h5>{{tile.text}}</h5>
+        </md-grid-tile-footer>
       </md-grid-tile>
     </md-grid-list>
   </md-content>

@@ -1,0 +1,23 @@
+<div flex layout="column"  class="content-column blue-background">
+  <div class="subcontent-title-white">
+    <h2> NUESTROS PRODUCTOS </h2>
+    <md-tabs md-center-tabs="true" class="partners-tabs" md-dynamic-height="true" md-border-bottom md-selected="$ctrl.tabSelectedIndex">
+        <md-tab>
+          <md-tab-label>
+            Mujeres
+          </md-tab-label>
+          <md-tab-body>
+            <app-n-cols data="$ctrl.mujeres"></app-n-cols>
+          </md-tab-body>
+        </md-tab>
+        <md-tab>
+          <md-tab-label>
+            Hombres
+          </md-tab-label>
+          <md-tab-body>
+            <app-n-cols data="$ctrl.hombres"></app-n-cols>
+          </md-tab-body>
+        </md-tab>
+    </md-tabs>
+  </div>
+</div>

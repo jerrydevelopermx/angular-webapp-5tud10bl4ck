@@ -1,8 +1,8 @@
 <div flex layout="column">
-    <app-gallery></app-gallery>
-    <app-n-cols data="$ctrl.presentacion"></app-n-cols>
-    <app-n-cols data="$ctrl.productos"></app-n-cols>
-    <app-n-cols data="$ctrl.nosotros"></app-n-cols>
+    <app-gallery parent="$ctrl.galleryParent"></app-gallery>
+    <app-n-cols data="$ctrl.content[0]"></app-n-cols>
+    <home-catalog></home-catalog>
+    <app-n-cols data="$ctrl.content[1]"></app-n-cols>
     <app-n-cols data="$ctrl.encuentranos"></app-n-cols>
     <contact-form></contact-form>
 </div>

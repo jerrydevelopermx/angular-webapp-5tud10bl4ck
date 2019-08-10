@@ -10,10 +10,36 @@
         controller: componentController
       })
 
-      function componentController($scope){
+      function componentController($scope, Requester, ContentUtils){
         var vm = this;
+        vm.galleryParent = 'home';
+        var content = [];
+        vm.content = [];
+
+
 
         vm.$onInit = function(){
+
+          Requester.get('content/chunks/home', {}).then(function(data){
+              vm.content = ContentUtils.getProcessedData(data);
+              vm.content[1].bottom = {
+                                      class: '',
+                                      content: [{
+                                                elementType: 'ul',
+                                                class: 'actions centered',
+                                                list: [{
+                                                        label:'Conócenos',
+                                                        class:'button medium',
+                                                        url:'#!/nosotros'
+                                                      }]
+
+                                                }]
+                                    };
+            }, function(){
+
+            })
+
+          /*
           vm.presentacion = {
                       class: 'content-column',
                       title: {
@@ -56,7 +82,8 @@
                               }],
                       bottom :null
                   };
-
+                  */
+          //TODO
           vm.productos = {
             class: 'content-column blue-background',
             title: {
@@ -119,7 +146,7 @@
               }
           };
 
-          vm.nosotros = {
+    /*      vm.nosotros = {
             class: 'content-column background-nosotros',
             title: {
                     text: 'Espacio resaltador de la marca',
@@ -150,7 +177,7 @@
                                       }]
                           }
           };
-
+*/
           vm.encuentranos = {
             class: 'content-column grey-background',
             title: {
@@ -222,6 +249,8 @@
           };
 
         };
+
+
 
       }
 

@@ -10,8 +10,10 @@
         controller: componentController
       })
 
-      function componentController($scope,$anchorScroll,$location){
+      function componentController($scope, $anchorScroll, $location, Requester, ContentUtils){
         var vm = this;
+        vm.content = [];
+        vm.galleryParent = 'inspirate';
 
         function anchorScroll(){
           var newHash = 'logo-div';
@@ -28,6 +30,12 @@
 
         vm.$onInit = function(){
           anchorScroll();
+          Requester.get('content/chunks/inspirate', {}).then(function(data){
+              vm.content = ContentUtils.getProcessedData(data);
+              console.log(vm.content)
+            }, function(){
+
+            });
 
           vm.presentacion = {
             class: 'content-column',

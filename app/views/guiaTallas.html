@@ -1,40 +1,103 @@
 <div flex layout="column" class="content-column" >
   <div flex layout="row" layout-md="column" layout-xs="column">
 
-    <div flex layout="row" layout-align="start start" >
-      <div flex="33" layout="column" layout-align="center center" style="border-right:  solid 2px #2a2a2a; padding-right:10px;margin-right:10px;">
-        <span style="margin:10px">
-          <a ng-class="{'selected-item':$ctrl.gender=='mujer'}" href ng-click="$ctrl.changeGender('mujer')" style="text-decoration:none; color:#666f77"> Mujer</a>
-        </span>
-        <span style="margin:10px">
-          <a ng-class="{'selected-item':$ctrl.gender=='hombre'}" href ng-click="$ctrl.changeGender('hombre')" style="text-decoration:none; color:#666f77">  Hombre </a>
-        </span>
+    <div flex layout="row" layout-align="start start">
+      <div flex layout="column" >
+        <md-tabs md-center-tabs="true" class="partners-tabs" md-dynamic-height="true" md-border-bottom md-selected="$ctrl.tabSelectedIndex">
+            <md-tab>
+              <md-tab-label>
+                Mujeres
+              </md-tab-label>
+              <md-tab-body>
+
+                <div flex layout="row">
+                  <div flex layout="column" layout-align="center center" style="border-right: 2px solid">
+                    <ul class="guides-list">
+                      <li ng-repeat="style in $ctrl.woman.styles">
+                        <a href ng-class="{'selected-item': style == $ctrl.womanStyle.label}" style="text-decoration:none; color:#666f77" ng-click="$ctrl.changeWomanStyle(style)"> {{style}} </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div layout="column" layout-align="center center" flex="15">
+                    <ul class="guides-list">
+                      <li ng-repeat="product in $ctrl.woman.products[$ctrl.womanStyle.value]">
+                        <a href ng-class="{'selected-item': product == $ctrl.womanSelectedProduct}" style="text-decoration:none; color:#666f77" ng-click="$ctrl.changeWomanProduct(product)"> {{product}} </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div layout="column" layout-align="center center" flex="30">
+                    <img src="images/inspirate-img-06.jpg" />
+                  </div>
+                  <div flex="45" layout="column" layout-align="center center">
+                    <table flex="100" ng-show="$ctrl.womanSizes.length > 0">
+                      <thead>
+                        <tr>
+                          <th>Tallas</th>
+                          <th>Cintura</th>
+                          <th>Cadera</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr ng-repeat="size in $ctrl.womanSizes">
+                            <td>{{size.name}}</td>
+                            <td>{{size.waist}}</td>
+                            <td>{{size.hip}}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </md-tab-body>
+            </md-tab>
+            <md-tab>
+              <md-tab-label>
+                Hombres
+              </md-tab-label>
+              <md-tab-body>
+                <div flex layout="row">
+                  <div flex layout="column" layout-align="center center" style="border-right: 2px solid">
+                    <ul class="guides-list">
+                      <li ng-repeat="style in $ctrl.man.styles">
+                        <a href ng-class="{'selected-item': style == $ctrl.manStyle.label}" style="text-decoration:none; color:#666f77" ng-click="$ctrl.changeManStyle(style)"> {{style}}</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div layout="column" layout-align="center center" flex="15">
+                    <ul class="guides-list">
+                      <li ng-repeat="product in $ctrl.man.products[$ctrl.manStyle.value]">
+                        <a href ng-class="{'selected-item': product == $ctrl.manSelectedProduct}" style="text-decoration:none; color:#666f77" ng-click="$ctrl.changeManProduct(product)"> {{product}} </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div layout="column" layout-align="center center" flex="30">
+                    <img src="images/inspirate-img-06.jpg" />
+                  </div>
+                  <div flex="45" layout="column" layout-align="center center">
+                    <table flex="100" ng-show="$ctrl.manSizes.length > 0">
+                      <thead>
+                        <tr>
+                          <th>Tallas</th>
+                          <th>Cintura</th>
+                          <th>Cadera</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr ng-repeat="size in $ctrl.manSizes">
+                            <td>{{size.name}}</td>
+                            <td>{{size.waist}}</td>
+                            <td>{{size.hip}}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </md-tab-body>
+            </md-tab>
+        </md-tabs>
       </div>
-      <div flex="66">
-        <img src="images/{{$ctrl.img}}" class="tallas-img"/>
-      </div>
+
     </div>
 
-    <div flex layout="row" layout-align="center center" style="padding:15px">
-      <table flex="100">
-        <thead>
-          <tr>
-            <th width="20%">Tallas disponibles</th>
-            <th>S</th>
-            <th>M</th>
-            <th>L</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr ng-repeat="talla in $ctrl.tallas">
-              <td>{{talla.type}}</td>
-              <td>{{talla.small}}</td>
-              <td>{{talla.medium}}</td>
-              <td>{{talla.long}}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
 
   </div>
 </div>

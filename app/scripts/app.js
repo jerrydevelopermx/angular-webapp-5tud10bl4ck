@@ -17,6 +17,10 @@ angular
       'ui.carousel'
   ])
 
+  .constant('APP',{
+    'api_url' : 'http://2070b1d4.ngrok.io/web-content-api/index.php/',//'http://localhost/web-content-api/index.php/',
+    'images_repo' : 'https://ancient-island-69990.herokuapp.com/'
+  })
 /*
   .run(function($rootScope) {
     $rootScope.$on("$locationChangeStart", function(event, next, current) {
