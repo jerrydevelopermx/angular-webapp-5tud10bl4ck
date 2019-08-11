@@ -1,0 +1,40 @@
+<md-dialog aria-label="Sizes Dialog">
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2> Guia de Tallas - {{$ctrl.code}} </h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="$ctrl.close()">
+          <md-icon md-font-icon="fa-close" class="fa fa-lg"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+      <div class="md-dialog-content" layout="row">
+        <div flex="30" layout="column" layout-align="center center"><img src="images/size-guide.png" height=""/></div>
+        <div flex layout="column" layout-align="center center">
+          <table flex="100" ng-show="$ctrl.sizes.length > 0">
+            <thead>
+              <tr>
+                <th>Tallas</th>
+                <th>Cintura</th>
+                <th>Cadera</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="size in $ctrl.sizes">
+                <td>{{size.description}}</td>
+                <td>{{size.waist}}</td>
+                <td>{{size.hip}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+      <md-button class="md-raised md-primary" ng-click="$ctrl.close()">
+        Cerrar
+      </md-button>
+    </md-dialog-actions>
+</md-dialog>

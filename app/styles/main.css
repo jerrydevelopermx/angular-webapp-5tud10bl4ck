@@ -208,6 +208,12 @@ ul.guides-list {
   color: #cbdcdf !important;
 }
 
+md-toolbar:not(.md-menu-toolbar) {
+  background-color: #192024 !important;
+}
+md-toolbar h2 {
+  color: #fff !important;
+}
 .sidemenu.md-button{
   font-size: 28px;
   margin: 20px 38px 6px 38px;

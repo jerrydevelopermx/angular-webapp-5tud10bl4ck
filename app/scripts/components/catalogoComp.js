@@ -10,7 +10,7 @@
         controller: componentController
       })
 
-      function componentController($scope, $anchorScroll, $location, Requester){
+      function componentController($scope, $anchorScroll, $location, Requester, $mdDialog){
         var vm = this;
         vm.styles = [];
         vm.selectedStyle = {};
@@ -62,10 +62,12 @@
         function getImgs(data){ console.log(data)
           var imgs = [];
           for(var i in data){
-            imgs.push({backgroundColor : '#fff', img: data[i].front_image, url:'', class: 'producto', code: data[i].code, price: data[i].price, color: data[i].color, sizes : '5, 7, 9, 11' });
+            imgs.push({backgroundColor : '#fff', img: data[i].front_image, url:'', class: 'producto', code: data[i].code, price: data[i].price, color: data[i].color, sizes : data[i].sizes });
           }
           return imgs;
         }
+
+
 
       }
 })();
