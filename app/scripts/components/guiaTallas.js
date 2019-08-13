@@ -18,9 +18,12 @@
         vm.womanStyle = { label :'Skinny', value : 'Skinny' };
         vm.womanSelectedProduct = '';
         vm.manSelectedProduct = '';
-
+        vm.womanImage = '';
+        vm.manImage = '';
         vm.manSizes;
         vm.womanSizes;
+        vm.showWomanGuide = false;
+        vm.showManGuide = false;
 
         vm.$onInit = function(){
           getData();
@@ -36,21 +39,23 @@
         }
 
         vm.changeWomanProduct = function(product){
-          vm.womanSelectedProduct = product;
-          Requester.get('sizesguide/sizes/' + product, {}).then(function(data){ console.log(data)
+          vm.womanImage = product.image;
+          vm.womanSelectedProduct = product.code;
+          Requester.get('guide/sizes/' + product.code, {}).then(function(data){
             vm.womanSizes = data;
           }, function(){});
         }
 
         vm.changeManProduct = function(product){
-          vm.manSelectedProduct = product;
-          Requester.get('sizesguide/sizes/' + product, {}).then(function(data){console.log(data)
+          vm.manImage = product.image;
+          vm.manSelectedProduct = product.code;
+          Requester.get('guide/sizes/' + product.code, {}).then(function(data){
             vm.manSizes = data;
           }, function(){});
         }
 
         function getData(){
-          Requester.get('sizesguide/styles', {}).then(function(data){
+          Requester.get('guide/styles', {}).then(function(data){
             processData(data)
           }, function(){});
 
@@ -65,8 +70,10 @@
               if(vm.man.products[styles[i].name.replace(/ /g,"-")] == undefined) {
                 vm.man.products[styles[i].name.replace(/ /g,"-")] = [];
               }
-              vm.man.products[styles[i].name.replace(/ /g,"-")].push(styles[i].code);
-
+              vm.man.products[styles[i].name.replace(/ /g,"-")].push(styles[i]);
+              if(vm.manSelectedProduct === ''){
+                vm.changeManProduct(styles[i]);
+              }
             } else {
               if(vm.woman.styles.indexOf(styles[i].name) === -1){
                 vm.woman.styles.push(styles[i].name);
@@ -74,12 +81,14 @@
               if(vm.woman.products[styles[i].name.replace(/ /g,"-")] == undefined) {
                 vm.woman.products[styles[i].name.replace(/ /g,"-")] = [];
               }
-              vm.woman.products[styles[i].name.replace(/ /g,"-")].push(styles[i].code);
+              vm.woman.products[styles[i].name.replace(/ /g,"-")].push(styles[i]);
+              if(vm.womanSelectedProduct === ''){
+                vm.changeWomanProduct(styles[i]);
+              }
             }
           }
 
-          console.log(vm.man);
-          console.log(vm.woman)
+
         }
 
       }

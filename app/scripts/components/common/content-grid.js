@@ -31,7 +31,7 @@
                 var $ctrl = this;
                 $ctrl.sizes = [];
                 $ctrl.code = product_id;
-                Requester.get('catalog/sizes/SBD01A'/* + $ctrl.code*/, {}).then(function(data){
+                Requester.get('catalog/sizes/'+ $ctrl.code, {}).then(function(data){
                   $ctrl.sizes = data;
                 }, function(){});
 

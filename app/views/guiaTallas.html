@@ -21,12 +21,13 @@
                   <div layout="column" layout-align="center center" flex="15">
                     <ul class="guides-list">
                       <li ng-repeat="product in $ctrl.woman.products[$ctrl.womanStyle.value]">
-                        <a href ng-class="{'selected-item': product == $ctrl.womanSelectedProduct}" style="text-decoration:none; color:#666f77" ng-click="$ctrl.changeWomanProduct(product)"> {{product}} </a>
+                        <a href ng-class="{'selected-item': product.code == $ctrl.womanSelectedProduct}" style="text-decoration:none; color:#666f77" ng-click="$ctrl.changeWomanProduct(product)"> {{product.code}} </a>
                       </li>
                     </ul>
                   </div>
                   <div layout="column" layout-align="center center" flex="30">
-                    <img src="images/inspirate-img-06.jpg" />
+                    <a href ng-click="$ctrl.showWomanGuide = true" ng-show="!$ctrl.showWomanGuide"><img class="guide-prod_img" ng-src="{{$ctrl.womanImage}}"/></a>
+                    <a href ng-click="$ctrl.showWomanGuide = false" ng-show="$ctrl.showWomanGuide"><img class="guide-prod_img" src="images/size-guide.png"/></a>
                   </div>
                   <div flex="45" layout="column" layout-align="center center">
                     <table flex="100" ng-show="$ctrl.womanSizes.length > 0">
@@ -65,12 +66,13 @@
                   <div layout="column" layout-align="center center" flex="15">
                     <ul class="guides-list">
                       <li ng-repeat="product in $ctrl.man.products[$ctrl.manStyle.value]">
-                        <a href ng-class="{'selected-item': product == $ctrl.manSelectedProduct}" style="text-decoration:none; color:#666f77" ng-click="$ctrl.changeManProduct(product)"> {{product}} </a>
+                        <a href ng-class="{'selected-item': product.code == $ctrl.manSelectedProduct}" style="text-decoration:none; color:#666f77" ng-click="$ctrl.changeManProduct(product)"> {{product.code}} </a>
                       </li>
                     </ul>
                   </div>
                   <div layout="column" layout-align="center center" flex="30">
-                    <img src="images/inspirate-img-06.jpg" />
+                    <a href ng-click="$ctrl.showManGuide = true" ng-show="!$ctrl.showManGuide"><img class="guide-prod_img" ng-src="{{$ctrl.manImage}}"/></a>
+                    <a href ng-click="$ctrl.showManGuide = false" ng-show="$ctrl.showManGuide"><img class="guide-prod_img" src="images/size-guide.png"/></a>
                   </div>
                   <div flex="45" layout="column" layout-align="center center">
                     <table flex="100" ng-show="$ctrl.manSizes.length > 0">
@@ -83,7 +85,7 @@
                       </thead>
                       <tbody>
                         <tr ng-repeat="size in $ctrl.manSizes">
-                            <td>{{size.name}}</td>
+                            <td>{{size.description}}</td>
                             <td>{{size.waist}}</td>
                             <td>{{size.hip}}</td>
                         </tr>

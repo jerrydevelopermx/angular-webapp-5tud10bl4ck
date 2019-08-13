@@ -170,6 +170,10 @@ body {
   color: #21610B;
 }
 
+.guide-prod_img {
+  height: 395px;
+  margin: 20px 0;
+}
 
 .cover-div img {
   opacity: 0.5;
