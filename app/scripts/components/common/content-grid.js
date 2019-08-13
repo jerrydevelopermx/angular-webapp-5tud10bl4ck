@@ -58,7 +58,7 @@
                 $ctrl.selectedImage = {};
                 Requester.get('catalog/product_images/' + $ctrl.code, {}).then(function(data){
                   $ctrl.images = data;
-                  $ctrl.selectedImage = data[0];
+                  $ctrl.selectedImage = data[0]; console.log(data[0])
                 }, function(){});
 
 

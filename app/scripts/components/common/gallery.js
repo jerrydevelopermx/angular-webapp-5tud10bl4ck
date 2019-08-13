@@ -16,7 +16,7 @@
         vm.showCarousel = false;
 
         vm.$onInit = function(){
-          Requester.get('catalog/galleries/' + vm.parent, {}).then(function(data){ 
+          Requester.get('catalog/galleries/' + vm.parent, {}).then(function(data){
               vm.images = processGallery(data);
             }, function(error){
                 console.log(error)
@@ -31,7 +31,10 @@
 
         function processGallery(data) {
           return data.map(function (image, index, array) {
-              return image.src;
+              var img = {};
+              img.src = image.src;
+              img.description = image.description;
+              return img;
           });
         }
 

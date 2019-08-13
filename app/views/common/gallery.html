@@ -4,15 +4,15 @@
     arrows=false
     slides-to-show="1"
     slides-to-scroll="1"
-    initial-slide="1"
+    initial-slide="0"
     autoplay="true"
     autoplay-speed="3000"
     dots="true">
 
     <carousel-item>
       <div class="image" style="position: relative">
-        <div style="position: absolute; top: 33%; left:33%; color: white; font-size:40px; font-weight: bolder ">TEXTO INTERESANTE AQUI</div>
-        <img ng-src="{{ item }}" >
+        <div style="position: absolute; top: 33%; left:33%; color: white; font-size:40px; font-weight: bolder ">{{item.description}}</div>
+        <img ng-src="{{ item.src }}" >
       </div>
     </carousel-item>
   </ui-carousel>

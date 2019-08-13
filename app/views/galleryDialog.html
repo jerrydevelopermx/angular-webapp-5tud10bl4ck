@@ -13,12 +13,15 @@
       <div class="md-dialog-content" layout="row">
         <div flex layout="column" layout-align="center center">
           <div flex layout="row" layout-md="column" layout-xs="column">
-            <div flex style="margin: 10px" ng-repeat="image in $ctrl.images">
-              
-              <a href ng-click="$ctrl.changeImage(image)"><img ng-src="{{ image.src }}" height="140"></a>
+            <div class="" ng-class="{'cover-div-selected' : image.image_id == $ctrl.selectedImage.image_id, 'cover-div' : image.image_id != $ctrl.selectedImage.image_id }" flex style="margin: 10px" ng-repeat="image in $ctrl.images">
+              <a href ng-click="$ctrl.changeImage(image)">
+                <img ng-src="{{ image.src }}" height="140" />
+              </a>
             </div>
           </div>
-          <div><img ng-src="{{$ctrl.selectedImage.src}}"></div>
+          <div>
+            <img ng-src="{{$ctrl.selectedImage.src}}">
+          </div>
         </div>
       </div>
     </md-dialog-content>

@@ -13,20 +13,18 @@
       <md-grid-tile
           ng-repeat="tile in $ctrl.data"
           ng-style="{ 'background': tile.backgroundColor }">
-
-        <!--<div style="position: absolute;bottom:0"></div>-->
           <md-card>
             <md-card-content>
-
-              <a href ng-click="$ctrl.openGalleryDialog(tile.code)">
-                <img ng-src="{{tile.img}}">
-              </a>
-              <div> Modelo: {{tile.code}}</div>
-              <div> Color: {{tile.color}}</div>
-              <div> Precio: ${{tile.price}}</div>
-              <div> Tallas disponibles: {{tile.sizes}}</div>
-              <div> <a href ng-click="$ctrl.openGuideDialog(tile.code)">Guia de tallas </a></div>
-
+              <div class="">
+                <a href ng-click="$ctrl.openGalleryDialog(tile.code)" class="product-img">
+                  <img ng-src="{{tile.img}}"/>
+                </a>
+              </div>
+              <div><span class="product-attr">Modelo:</span> <span class="product-code">{{tile.code}}</span></div>
+              <div><span class="product-attr">Color:</span> <span class="product-color">{{tile.color}}</span></div>
+              <div><span class="product-attr">Precio:</span> <span class="product-price">${{tile.price}}</span></div>
+              <div><span class="product-attr">Tallas disponibles:</span>  <span class="product-sizes"> {{tile.sizes}}</span></div>
+              <div><a href ng-click="$ctrl.openGuideDialog(tile.code)"> Guia de tallas </a></div>
             </md-card-content>
           </md-card>
       </md-grid-tile>

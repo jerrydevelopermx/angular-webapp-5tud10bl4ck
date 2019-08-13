@@ -15,21 +15,7 @@
         vm.styles = [];
         vm.selectedStyle = {};
         vm.$onInit = function(){
-          console.log(vm.type)
           getStyles();
-
-
-          /*vm.catalog = { type : 'Skinny',
-                          grids: [{ type: '',
-                                  class: 'grid-title',
-                                   imgs: [{color : '#fff', img: 'home-img-05', url:'', class: 'producto', text:'Producto 1'},
-                                          {color : '#fff', img: 'home-img-04', url:'', class: 'producto', text:'Producto 2'},
-                                          {color : '#fff', img: 'home-img-06', url:'', class: 'producto', text:'Producto 3'},
-                                          {color : '#fff', img: 'home-img-07', url:'', class: 'producto', text:'Producto 4'},
-                                          {color : '#fff', img: 'home-img-07', url:'', class: 'producto', text:'Producto 5'}
-                                        ]
-                                 }]
-                        } */
         }
 
         vm.changeStyle = function(style){ console.log(style)
@@ -40,6 +26,8 @@
         function getStyles(){
           Requester.get('catalog/styles/' + vm.type, {}).then(function(data){ console.log(data)
             vm.styles = data;
+            vm.selectedStyle = data[0];
+            getProducts();
           }, function(){});
         }
 
