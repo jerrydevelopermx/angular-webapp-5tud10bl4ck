@@ -267,11 +267,13 @@ md-toolbar h2 {
 }
 
 div.background-nosotros{
-  background-image: url('../images/home-img-08@2x.png');
+  background-image: url('../images/home-background.jpg');
   background-size:     cover;                      /* <------ */
   background-repeat:   no-repeat;
   background-position: center center;
+  color: #fff;
 }
+
 .blue-background h4, .blue-background h2, .blue-background h4{
   color: #fff;
 }
