@@ -19,7 +19,7 @@
         //  console.log(vm.data)
         }
 
-        vm.openGuideDialog = function(product_id) {
+        vm.openGuideDialog = function(product_id, image) {
             $mdDialog.show({
               controllerAs: '$ctrl',
               bindToController: true,
@@ -31,6 +31,7 @@
                 var $ctrl = this;
                 $ctrl.sizes = [];
                 $ctrl.code = product_id;
+                $ctrl.guideImage = (image.indexOf('woman') !== -1) ? 'guia-mujer.jpg' : 'guia-hombre.jpg';
                 Requester.get('catalog/sizes/'+ $ctrl.code, {}).then(function(data){
                   $ctrl.sizes = data;
                 }, function(){});
@@ -58,7 +59,7 @@
                 $ctrl.selectedImage = {};
                 Requester.get('catalog/product_images/' + $ctrl.code, {}).then(function(data){
                   $ctrl.images = data;
-                  $ctrl.selectedImage = data[0]; console.log(data[0])
+                  $ctrl.selectedImage = data[0];
                 }, function(){});
 
 

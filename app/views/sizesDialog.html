@@ -11,7 +11,7 @@
 
     <md-dialog-content>
       <div class="md-dialog-content" layout="row">
-        <div flex="30" layout="column" layout-align="center center"><img src="images/size-guide.png" height=""/></div>
+        <div flex="30" layout="column" layout-align="center center"><img ng-src="images/{{$ctrl.guideImage}}"/></div>
         <div flex layout="column" layout-align="center center">
           <table flex="100" ng-show="$ctrl.sizes.length > 0">
             <thead>
