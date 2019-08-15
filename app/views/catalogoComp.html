@@ -16,8 +16,8 @@
 
   <div flex layout="row" layout-md="column" layout-xs="column" style="border: 1px dotted">
 
-      <div flex="15" layout="column" layout-align="start center" style="border-right:  solid 2px #2a2a2a; padding-right:10px;margin-right:10px;">
-        <ul class="guides-list">
+      <div flex="15" flex-xs="80" flex-md="80" layout="column" layout-align="start center" class="styles-div">
+        <ul flex class="guides-list">
           <li ng-repeat="style in $ctrl.styles">
             <a href ng-class="{'selected-item': style.name == $ctrl.selectedStyle.name}" style="text-decoration:none; color:#666f77" ng-click="$ctrl.changeStyle(style)">{{style.name}}</a>
           </li>
