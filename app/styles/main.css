@@ -2,6 +2,11 @@
 @import url(font-awesome.min.css);
 @import url(http://fonts.googleapis.com/css?family=Raleway:700,400);
 
+@font-face {
+  font-family: 'BebasNeue';
+  src: URL('../fonts/BebasNeue.otf') format('opentype');
+}
+
 body {
   background: #fff;
   font-size: 11pt;
@@ -89,7 +94,7 @@ body {
       top: 50%;
       left:50%;
       color: white;
-      font-size:40px;
+      font-size:60px;
       font-weight: bolder;
       text-transform: uppercase;
       transform: translate(-50%, -50%);
@@ -201,13 +206,16 @@ body {
       top: 50%;
       left:50%;
       color: white;
-      font-size:20px;
+      font-size:15px;
       font-weight: bolder;
       text-transform: uppercase;
       transform: translate(-50%, -50%);
     }
 }
 
+.bebas-content {
+  font-family: BebasNeue,sans-serif;
+}
 
 .product-attr {
   font-weight: bolder;
