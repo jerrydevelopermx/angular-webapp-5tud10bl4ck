@@ -10,26 +10,31 @@
               </md-tab-label>
               <md-tab-body>
 
-                <div flex layout="row">
-                  <div flex layout="column" layout-align="center center" style="border-right: 2px solid">
+                <div flex layout="row" layout-xs="column">
+
+                  <div flex="15" flex-xs="90" layout="column" layout-align="center center" style="border-right: 2px solid">
                     <ul class="guides-list">
                       <li ng-repeat="style in $ctrl.woman.styles">
                         <a href ng-class="{'selected-item': style == $ctrl.womanStyle.label}" style="text-decoration:none; color:#666f77" ng-click="$ctrl.changeWomanStyle(style)"> {{style}} </a>
                       </li>
                     </ul>
                   </div>
-                  <div layout="column" layout-align="center center" flex="15">
-                    <ul class="guides-list">
-                      <li ng-repeat="product in $ctrl.woman.products[$ctrl.womanStyle.value]">
-                        <a href ng-class="{'selected-item': product.code == $ctrl.womanSelectedProduct}" style="text-decoration:none; color:#666f77" ng-click="$ctrl.changeWomanProduct(product)"> {{product.code}} </a>
-                      </li>
-                    </ul>
+
+                  <div flex layout="row" layout-xs="row">
+                    <div flex="30" layout="column" layout-align="center center" flex="15" style="border: 1px solid">
+                      <ul class="products-list">
+                        <li ng-repeat="product in $ctrl.woman.products[$ctrl.womanStyle.value]">
+                          <a href ng-class="{'selected-item': product.code == $ctrl.womanSelectedProduct}" style="text-decoration:none; color:#666f77" ng-click="$ctrl.changeWomanProduct(product)"> {{product.code}} </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div flex layout="column" layout-align="center center" flex="30">
+                      <a href ng-click="$ctrl.showWomanGuide = true" ng-show="!$ctrl.showWomanGuide"><img class="guide-prod_img" ng-src="{{$ctrl.womanImage}}"/></a>
+                      <a href ng-click="$ctrl.showWomanGuide = false" ng-show="$ctrl.showWomanGuide"><img class="guide-prod_img" src="images/guia-mujer.jpg"/></a>
+                    </div>
                   </div>
-                  <div layout="column" layout-align="center center" flex="30">
-                    <a href ng-click="$ctrl.showWomanGuide = true" ng-show="!$ctrl.showWomanGuide"><img class="guide-prod_img" ng-src="{{$ctrl.womanImage}}"/></a>
-                    <a href ng-click="$ctrl.showWomanGuide = false" ng-show="$ctrl.showWomanGuide"><img class="guide-prod_img" src="images/guia-mujer.jpg"/></a>
-                  </div>
-                  <div flex="45" layout="column" layout-align="center center">
+
+                  <div flex="55" flex-xs="100" layout="column" layout-align="center center" style="border: 1px solid">
                     <table flex="100" ng-show="$ctrl.womanSizes.length > 0">
                       <thead>
                         <tr>
@@ -47,6 +52,7 @@
                       </tbody>
                     </table>
                   </div>
+
                 </div>
               </md-tab-body>
             </md-tab>
