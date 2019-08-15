@@ -1,6 +1,6 @@
 <div ng-repeat="c in $ctrl.data.content" ng-class="{'centered': $ctrl.data.centered }">
   <li ng-if="c.elementType === 'icon'" class="{{c.class}}"></li>
-  <p ng-if="c.elementType === 'p' || c.elementType === 'text'" class="{{c.class}}">{{c.text}}</p>
+  <div ng-if="c.elementType === 'p' || c.elementType === 'text'" class="{{c.class}}" ng-bind-html="c.text"></div>
   <img ng-if="c.elementType === 'img'" ng-src="{{c.src}}" class="{{c.class}}"/>
   <ul ng-if="c.elementType === 'ul'" class="{{c.class}}">
     <li ng-repeat="l in c.list"><a class="{{l.class}}" href="{{l.url}}">{{l.label}}</a></li>

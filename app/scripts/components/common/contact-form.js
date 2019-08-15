@@ -4,14 +4,12 @@
 
     .component('contactForm', {
         bindings: {
-          data: '=',
+          message: '=',
         },
         templateUrl: 'views/common/contact-form.html',
         controller: componentController
       })
 
-      function componentController($scope,$anchorScroll,$location){
-
-      }
+      function componentController($scope,$anchorScroll,$location){}
 
 })();

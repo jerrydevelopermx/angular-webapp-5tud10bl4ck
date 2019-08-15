@@ -283,6 +283,17 @@ div.background-nosotros{
 }
 
 
+.ol-list ol li{
+  margin-left:0; padding-left:0;
+  list-style-position:inside;
+  text-align: left !important;
+}
+
+.title-phrase {
+  font-size: 30px;
+  font-style: italic;
+  font-weight: bolder;
+}
 
 .content-column-footer {
   padding: 20px;

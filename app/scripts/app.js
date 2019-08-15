@@ -14,6 +14,7 @@ angular
       'ngMaterial',
       'ngMessages',
       'nemLogging',
+      'ngSanitize',
       'ui.carousel'
   ])
 

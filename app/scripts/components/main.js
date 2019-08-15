@@ -13,12 +13,14 @@
       function componentController($scope, Requester, ContentUtils){
         var vm = this;
         vm.galleryParent = 'home';
+        vm.contactFormMessage = ' ';
         var content = [];
         vm.content = [];
 
 
 
         vm.$onInit = function(){
+          vm.contactFormMessage = 'Descubre las novedades, productos y promociones que tenemos para ti o aclara cualquier duda que tengas.';
 
           Requester.get('content/chunks/home', {}).then(function(data){
               vm.content = ContentUtils.getProcessedData(data);

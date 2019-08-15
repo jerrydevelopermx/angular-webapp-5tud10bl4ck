@@ -18,7 +18,7 @@ angular.module('webApp')
   }
 
   /* Grouping chunks content */
-  function groupContent(obj){ console.log(obj)
+  function groupContent(obj){
     var partial = {
       class: obj.class,
       title : {
@@ -32,7 +32,7 @@ angular.module('webApp')
       columns : getColumnsContent(obj.columns),
       bottom: null //getBottomContent(att)
     };
-
+    console.log(partial)
     return partial;
   }
   /* Formatting bottom content*/
@@ -47,7 +47,7 @@ angular.module('webApp')
     columnsContent.push({
                   title: columns[c].title,
                   class: 'content-column',
-                  centered: true,
+                  centered: false,
                   content: [{
                          elementType: columns[c].elementType,
                          src: columns[c].src,
