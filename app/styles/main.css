@@ -23,7 +23,7 @@ body {
     .content-column {
       /*padding: 20px;*/
       margin:10px;
-      border:1px solid;
+      /*border:1px solid;*/
     }
     div.logo{
       height:80px;
@@ -137,7 +137,7 @@ body {
     .content-column {
       padding: 5px;
       margin:5px;
-      border:1px solid;
+      /*border:1px solid;*/
     }
     div.logo{
       height:80px;
@@ -233,7 +233,7 @@ body {
     ul.guides-list li {
       float: left;
       margin:10px;
-      border-bottom: 2px solid rgb(102, 111, 119);
+      border-bottom: 2px solid rgb(102, 111, 119);
     }
 
 }
