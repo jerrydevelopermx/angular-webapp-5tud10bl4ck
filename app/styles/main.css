@@ -71,6 +71,19 @@ body {
       position: relative;
       height: 438px;
     }
+    .subcontent-title-blue h2{
+        color: #ffffff !important;
+        margin: 0;
+        font-weight: bolder;
+        font-size: 28px;
+    }
+
+    .subcontent-title-white h2{
+        color: #666f77 !important;
+        margin: 0;
+        font-weight: bolder;
+        font-size: 28px;
+    }
 }
 
 
@@ -160,7 +173,19 @@ body {
       height: 130px;
     }
 
+    .subcontent-title-blue h2{
+        color: #ffffff !important;
+        margin: 0;
+        font-weight: bolder;
+        font-size: 18px;
+    }
 
+    .subcontent-title-white h2{
+        color: #666f77 !important;
+        margin: 0;
+        font-weight: bolder;
+        font-size: 18px;
+    }
 }
 
 
@@ -388,17 +413,7 @@ a.icon {
         /*border: 1px solid;*/
   }
 
-.subcontent-title-blue h2{
-    color: #ffffff !important;
-    margin: 0;
-    font-weight: bolder;
-}
 
-.subcontent-title-white h2{
-    color: #666f77 !important;
-    margin: 0;
-    font-weight: bolder;
-}
 
 .ul-footer{
   list-style-type: none;
