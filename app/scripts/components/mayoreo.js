@@ -29,8 +29,9 @@
 
         vm.$onInit = function(){
           vm.contactFormMessage = '¡Escríbenos y recibe atención personalizada!';
-          
+
           Requester.get('content/chunks/mayoreo', {}).then(function(data){
+              ContentUtils.setType('');
               vm.content = ContentUtils.getProcessedData(data);
             }, function(){
 

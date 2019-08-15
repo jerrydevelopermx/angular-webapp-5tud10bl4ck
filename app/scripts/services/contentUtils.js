@@ -1,20 +1,31 @@
 angular.module('webApp')
   .factory('ContentUtils',function($q, $http, APP) {
 
+  var contentType = '';
 
   return {
-    getProcessedData: processData
-
+    getProcessedData: processData,
+    setType : setType
   }
 
+  function setType(type){
+    contentType = type;
+  }
 
-
-  function processData(data){
+  function processData(data){ console.log(data)
     var content = [];
-    for(var att in data){
-      content.push(groupContent(data[att]))
+    if((contentType != 'demoCatalog')){
+      for(var att in data){
+        content.push(groupContent(data[att]))
+      }
+    } else {
+      content.push(groupDemoCatalogContent(data))
     }
     return content;
+  }
+
+  function getType(){
+    return contentType;
   }
 
   /* Grouping chunks content */
@@ -32,7 +43,17 @@ angular.module('webApp')
       columns : getColumnsContent(obj.columns),
       bottom: null //getBottomContent(att)
     };
-    console.log(partial)
+    return partial;
+  }
+  /* Grouping mini Catalog content */
+  function groupDemoCatalogContent(columns){
+    var partial = {
+      class: '',
+      title: null,
+      description : null,
+      columns : getCatalogColumnsContent(columns),
+      bottom: null //getBottomContent(att)
+    };
     return partial;
   }
   /* Formatting bottom content*/
@@ -55,6 +76,30 @@ angular.module('webApp')
                          text: columns[c].text
                        }]
                      });
+
+      return columnsContent;
+  }
+
+  function getCatalogColumnsContent(columns){
+    var columnsContent = [];
+    for(var c in columns){
+          columnsContent.push({
+              title: '',
+              class: 'content-column',
+              centered: true,
+              content: [{
+                         elementType: 'img',
+                         src: columns[c].image,
+                         class: 'main-img'
+                       },
+                       {
+                         elementType: 'p',
+                         class: 'justified',
+                         text:  '<div class="homeCatalog-content"><span class="product-attr">' + columns[c].code + '</span></div>' +
+                                '<div class="homeCatalog-content home-catalog-description">' + columns[c].description + '</div>'
+                       }]
+            })
+      }
 
       return columnsContent;
   }

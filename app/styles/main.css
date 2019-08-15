@@ -295,6 +295,15 @@ div.background-nosotros{
   font-weight: bolder;
 }
 
+.homeCatalog-content {
+  margin: 15px;
+  color: #666f77;
+  text-align: center;
+}
+
+.home-catalog-description {
+  height: 52px;
+}
 .content-column-footer {
   padding: 20px;
   margin:5px;

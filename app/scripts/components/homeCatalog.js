@@ -10,76 +10,15 @@
         controller: componentController
       })
 
-      function componentController($scope,$anchorScroll,$location){
+      function componentController($scope, $anchorScroll, $location, Requester, ContentUtils){
         var vm = this;
-
+        vm.mujeres = [];
 
         vm.$onInit = function(){
-          vm.mujeres = {
-            class: '',
-            title: null,
-            description: null,
-            columns: [{
-                      title: '',
-                      class: 'content-column',
-                      centered: true,
-                      content: [{
-                                 elementType: 'img',
-                                 src: 'images/home-img-04@2x.png',
-                                 class: 'main-img'
-                               },
-                               {
-                                   elementType: 'p',
-                                   class: 'justified',
-                                   text: 'Producto 1'
-                               }]
-                    },
-                    {
-                      title: '',
-                      class: 'content-column',
-                      centered: true,
-                      content: [{
-                                 elementType: 'img',
-                                 src: 'images/home-img-05@2x.png',
-                                 class: 'main-img'
-                               },
-                               {
-                                   elementType: 'p',
-                                   class: 'justified',
-                                   text: 'Producto 2'
-                               }]
-                    },
-                    {
-                      title: '',
-                      class: 'content-column',
-                      centered: true,
-                      content: [{
-                                 elementType: 'img',
-                                 src: 'images/home-img-06@2x.png',
-                                 class: 'main-img'
-                               },
-                               {
-                                   elementType: 'p',
-                                   class: 'justified',
-                                   text: 'Producto 3'
-                               }]
-                    },
-                    {
-                      title: '',
-                      class: 'content-column',
-                      centered: true,
-                      content: [{
-                                 elementType: 'img',
-                                 src: 'images/home-img-07@2x.png',
-                                 class: 'main-img'
-                               },
-                               {
-                                   elementType: 'p',
-                                   class: 'justified',
-                                   text: 'Producto 4'
-                               }]
-                    }],
-              bottom : {
+          Requester.get('catalog/products_demo/mujer', {}).then(function(data){
+              ContentUtils.setType('demoCatalog');
+              vm.mujeres = ContentUtils.getProcessedData(data);
+              vm.mujeres[0].bottom = {
                 class: '',
                 content: [{
                             elementType: 'ul',
@@ -92,86 +31,30 @@
 
                           }]
               }
-          };
+            }, function(){
 
-          vm.hombres = {
-            class: '',
-            title: null,
-            description: null,
-            columns: [{
-                      title: '',
-                      class: 'content-column',
-                      centered: true,
-                      content: [{
-                                 elementType: 'img',
-                                 src: 'images/inspirate-img-06.jpg',
-                                 class: 'main-img'
-                               },
-                               {
-                                   elementType: 'p',
-                                   class: 'justified',
-                                   text: 'Producto 1'
-                               }]
-                    },
-                    {
-                      title: '',
-                      class: 'content-column',
-                      centered: true,
-                      content: [{
-                                 elementType: 'img',
-                                 src: 'images/inspirate-img-06.jpg',
-                                 class: 'main-img'
-                               },
-                               {
-                                   elementType: 'p',
-                                   class: 'justified',
-                                   text: 'Producto 2'
-                               }]
-                    },
-                    {
-                      title: '',
-                      class: 'content-column',
-                      centered: true,
-                      content: [{
-                                 elementType: 'img',
-                                 src: 'images/inspirate-img-06.jpg',
-                                 class: 'main-img'
-                               },
-                               {
-                                   elementType: 'p',
-                                   class: 'justified',
-                                   text: 'Producto 3'
-                               }]
-                    },
-                    {
-                      title: '',
-                      class: 'content-column',
-                      centered: true,
-                      content: [{
-                                 elementType: 'img',
-                                 src: 'images/inspirate-img-06.jpg',
-                                 class: 'main-img'
-                               },
-                               {
-                                   elementType: 'p',
-                                   class: 'justified',
-                                   text: 'Producto 4'
-                               }]
-                    }],
-              bottom : {
-                class: '',
-                content: [{
-                            elementType: 'ul',
-                            class: 'actions centered',
-                            list: [{
-                                      label:'Ver más',
-                                      class:'button medium',
-                                      url:'#!/hombres'
-                                  }]
+            })
 
-                          }]
-              }
-          };
+            Requester.get('catalog/products_demo/hombre', {}).then(function(data){
+                ContentUtils.setType('demoCatalog');
+                vm.hombres = ContentUtils.getProcessedData(data);
+                vm.hombres[0].bottom = {
+                  class: '',
+                  content: [{
+                              elementType: 'ul',
+                              class: 'actions centered',
+                              list: [{
+                                        label:'Ver más',
+                                        class:'button medium',
+                                        url:'#!/hombres'
+                                    }]
+
+                            }]
+                }
+              }, function(){
+
+              })
+
         }
 
 

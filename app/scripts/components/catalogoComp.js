@@ -18,13 +18,13 @@
           getStyles();
         }
 
-        vm.changeStyle = function(style){ console.log(style)
+        vm.changeStyle = function(style){
           vm.selectedStyle = style
           getProducts();
         }
 
         function getStyles(){
-          Requester.get('catalog/styles/' + vm.type, {}).then(function(data){ console.log(data)
+          Requester.get('catalog/styles/' + vm.type, {}).then(function(data){
             vm.styles = data;
             vm.selectedStyle = data[0];
             getProducts();
@@ -33,7 +33,6 @@
 
         function getProducts(){
           Requester.get('catalog/products/' + vm.selectedStyle.style_id, {}).then(function(data){
-            console.log(data);
             processProducts(data);
           }, function(){});
         }
