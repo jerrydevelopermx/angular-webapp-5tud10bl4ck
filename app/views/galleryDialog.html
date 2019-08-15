@@ -1,4 +1,4 @@
-<md-dialog aria-label="Gallery Dialog" flex="50">
+<md-dialog aria-label="Gallery Dialog" flex="50" flex-xs="90">
     <md-toolbar>
       <div class="md-toolbar-tools">
         <h2> Galería - {{$ctrl.code}} </h2>
@@ -12,15 +12,15 @@
     <md-dialog-content>
       <div class="md-dialog-content" layout="row">
         <div flex layout="column" layout-align="center center">
-          <div flex layout="row" layout-md="column" layout-xs="column">
+          <div flex layout="row">
             <div class="" ng-class="{'cover-div-selected' : image.image_id == $ctrl.selectedImage.image_id, 'cover-div' : image.image_id != $ctrl.selectedImage.image_id }" flex style="margin: 10px" ng-repeat="image in $ctrl.images">
               <a href ng-click="$ctrl.changeImage(image)">
-                <img ng-src="{{ image.src }}" height="140" />
+                <img ng-src="{{ image.src }}" class="prod-gallery-img"/>
               </a>
             </div>
           </div>
           <div>
-            <img ng-src="{{$ctrl.selectedImage.src}}">
+            <img ng-src="{{$ctrl.selectedImage.src}}" class="prod-gallery-img-selected"/>
           </div>
         </div>
       </div>

@@ -115,6 +115,14 @@ body {
     ul.products-list {
         font-size: 18px;
     }
+
+    img.prod-gallery-img {
+      height : 140px;
+    }
+
+    img.prod-gallery-img-selected {
+      height: 495px;
+    }
 }
 
 
@@ -250,6 +258,12 @@ body {
         font-size: 15px;
     }
 
+    img.prod-gallery-img {
+      height : 70px;
+    }
+    img.prod-gallery-img-selected {
+      height: 395px;
+    }
 }
 
 .bebas-content {

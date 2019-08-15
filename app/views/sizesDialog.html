@@ -1,4 +1,4 @@
-<md-dialog aria-label="Sizes Dialog">
+<md-dialog aria-label="Sizes Dialog" flex="80" flex-xs="90">
     <md-toolbar>
       <div class="md-toolbar-tools">
         <h2> Guia de Tallas - {{$ctrl.code}} </h2>
@@ -10,8 +10,10 @@
     </md-toolbar>
 
     <md-dialog-content>
-      <div class="md-dialog-content" layout="row">
-        <div flex="30" layout="column" layout-align="center center"><img ng-src="images/{{$ctrl.guideImage}}"/></div>
+      <div class="md-dialog-content" layout="row" layout-xs="column">
+        <div flex="30" flex-xs="90" layout="column" layout-align="center center">
+          <img ng-src="images/{{$ctrl.guideImage}}"/>
+        </div>
         <div flex layout="column" layout-align="center center">
           <table flex="100" ng-show="$ctrl.sizes.length > 0">
             <thead>
