@@ -84,6 +84,16 @@ body {
         font-weight: bolder;
         font-size: 28px;
     }
+    .image-banner-text {
+      position: absolute;
+      top: 50%;
+      left:50%;
+      color: white;
+      font-size:40px;
+      font-weight: bolder;
+      text-transform: uppercase;
+      transform: translate(-50%, -50%);
+    }
 }
 
 
@@ -185,6 +195,16 @@ body {
         margin: 0;
         font-weight: bolder;
         font-size: 18px;
+    }
+    .image-banner-text {
+      position: absolute;
+      top: 50%;
+      left:50%;
+      color: white;
+      font-size:20px;
+      font-weight: bolder;
+      text-transform: uppercase;
+      transform: translate(-50%, -50%);
     }
 }
 
