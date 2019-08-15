@@ -66,6 +66,11 @@ body {
     h4.grid-title  {
       font-size: 16px;
     }
+
+    .image-banner-div {
+      position: relative;
+      height: 438px;
+    }
 }
 
 
@@ -149,6 +154,13 @@ body {
     img.main-img{
       width: 300px;
     }
+
+    .image-banner-div {
+      position: relative;
+      height: 130px;
+    }
+
+
 }
 
 
