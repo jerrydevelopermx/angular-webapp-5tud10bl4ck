@@ -8,7 +8,7 @@
         md-cols-xs="1"
         md-gutter="10px"
         md-row-height="2:4"
-        md-row-height-xs="3:2">
+        md-row-height-xs="3:6">
 
       <md-grid-tile
           ng-repeat="tile in $ctrl.data"
@@ -16,8 +16,8 @@
           <md-card>
             <md-card-content>
               <div class="">
-                <a href ng-click="$ctrl.openGalleryDialog(tile.code)" class="product-img">
-                  <img ng-src="{{tile.img}}"/>
+                <a href ng-click="$ctrl.openGalleryDialog(tile.code)" >
+                  <img ng-src="{{tile.img}}" class="product-img"/>
                 </a>
               </div>
               <div><span class="product-attr">Modelo:</span> <span class="product-code">{{tile.code}}</span></div>

@@ -99,6 +99,9 @@ body {
       text-transform: uppercase;
       transform: translate(-50%, -50%);
     }
+    img.tallas-img{
+      width: 220px;
+    }
 }
 
 
@@ -210,6 +213,9 @@ body {
       font-weight: bolder;
       text-transform: uppercase;
       transform: translate(-50%, -50%);
+    }
+    .product-img{
+      width:250px
     }
 }
 

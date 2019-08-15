@@ -1,23 +1,20 @@
 <div flex layout="column"  class="content-column">
+  <div flex layout="row" style="border: 1px dotted" layout-md="column" layout-xs="column"  layout-align="center center" style="background-color: #f3f3f3;">
 
-  <div flex layout="row" layout-md="column" layout-xs="column"  style="background-color: #f3f3f3;  margin:25px">
-
-    <div flex layout="row" layout-align="center center">
+    <div flex="40" flex-xs="90" layout="row" layout-align="center center" style="border: 1px solid">
       <img ng-src="{{$ctrl.selectedStyle.src}}" class="tallas-img"/>
     </div>
-    <div flex layout="column" layout-align="center center">
-      <p>
 
-        <b>{{$ctrl.selectedStyle.name}}</b> <br/>
-        {{$ctrl.selectedStyle.description}}
-        <br/>
-
-      </p>
+    <div flex="40" flex-xs="90" layout="column" layout-align="center center" style="border: 1px solid">
+      <h3 flex>{{$ctrl.selectedStyle.name}}</h3>
+      <div flex style="padding:0 15px">
+          {{$ctrl.selectedStyle.description}}
+      </div>
     </div>
 
   </div>
 
-  <div flex layout="row"  style="margin:25px">
+  <div flex layout="row" layout-md="column" layout-xs="column" style="border: 1px dotted">
 
       <div flex="15" layout="column" layout-align="start center" style="border-right:  solid 2px #2a2a2a; padding-right:10px;margin-right:10px;">
         <ul class="guides-list">
@@ -31,4 +28,6 @@
       </div>
 
   </div>
+
+
 </div>
