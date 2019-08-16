@@ -86,7 +86,7 @@
                   </div>
 
                   <div flex="55" flex-xs="100" layout="column" layout-align="center center" >
-                    <table flex="100" ng-show="$ctrl.manSizes.length > 0">
+                    <table flex="70" ng-show="$ctrl.manSizes.length > 0">
                       <thead>
                         <tr>
                           <th>Tallas</th>
@@ -103,48 +103,6 @@
                       </tbody>
                     </table>
                   </div>
-<!--
-                  <div flex="15" flex-xs="90" layout="column" layout-align="center center" style="border-right: 2px solid">
-                    <ul class="guides-list">
-                      <li ng-repeat="style in $ctrl.man.styles">
-                        <a href ng-class="{'selected-item': style == $ctrl.manStyle.label}" style="text-decoration:none; color:#666f77" ng-click="$ctrl.changeManStyle(style)"> {{style}}</a>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div flex layout="row" layout-xs="row">
-                    <div layout="column" layout-align="center center" flex="30">
-                      <ul class="products-list">
-                        <li ng-repeat="product in $ctrl.man.products[$ctrl.manStyle.value]">
-                          <a href ng-class="{'selected-item': product.code == $ctrl.manSelectedProduct}" style="text-decoration:none; color:#666f77" ng-click="$ctrl.changeManProduct(product)"> {{product.code}} </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div layout="column" layout-align="center center" flex="30">
-                      <a href ng-click="$ctrl.showManGuide = true" ng-show="!$ctrl.showManGuide"><img class="guide-prod_img" ng-src="{{$ctrl.manImage}}"/></a>
-                      <a href ng-click="$ctrl.showManGuide = false" ng-show="$ctrl.showManGuide"><img class="guide-prod_img" src="images/guia-hombre.jpg"/></a>
-                    </div>
-                  </div>
-
-                  <div flex="55" flex-xs="100" layout="column" layout-align="center center" >
-                    <table flex="100" ng-show="$ctrl.manSizes.length > 0">
-                      <thead>
-                        <tr>
-                          <th>Tallas</th>
-                          <th>Cintura</th>
-                          <th>Cadera</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr ng-repeat="size in $ctrl.manSizes">
-                            <td>{{size.description}}</td>
-                            <td>{{size.waist}}</td>
-                            <td>{{size.hip}}</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
--->
                 </div>
               </md-tab-body>
             </md-tab>
