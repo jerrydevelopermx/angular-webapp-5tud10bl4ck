@@ -1,4 +1,4 @@
-<div ng-repeat="c in $ctrl.data.content" ng-class="{'centered': $ctrl.data.centered }">
+<div ng-repeat="c in $ctrl.data.content" ng-if="$ctrl.data.content[0].elementType != null" ng-class="{'centered': $ctrl.data.centered }">
   <li ng-if="c.elementType === 'icon'" class="{{c.class}}"></li>
   <div ng-if="c.elementType === 'p' || c.elementType === 'text'" class="{{c.class}}" ng-bind-html="c.text"></div>
   <img ng-if="c.elementType === 'img'" ng-src="{{c.src}}" class="{{c.class}}"/>
