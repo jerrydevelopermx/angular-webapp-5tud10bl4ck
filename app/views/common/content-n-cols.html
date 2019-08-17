@@ -5,7 +5,7 @@
   <div ng-if="$ctrl.data.description != null" flex layout="column" layout-md="column" layout-xs="column" class="{{$ctrl.data.description.class}}">
     {{$ctrl.data.description.text}}
   </div>
-  <div flex layout="row" layout-md="column" layout-xs="column">
+  <div flex layout="row" layout-xs="column">
     <div layout="column" layout-align="center center" flex class="{{column.class}}" ng-repeat="column in $ctrl.data.columns">
       <h4 class="{{column.titleClass}}">{{column.title}}</h4>
       <element-content data="column"></element-content>
