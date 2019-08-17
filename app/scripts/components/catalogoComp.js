@@ -46,7 +46,7 @@
                             }];
         }
 
-        function getImgs(data){ console.log(data)
+        function getImgs(data){
           var imgs = [];
           for(var i in data){
             imgs.push({backgroundColor : '#fff', img: data[i].front_image, url:'', class: 'producto', code: data[i].code, price: data[i].price, color: data[i].color, sizes : data[i].sizes });

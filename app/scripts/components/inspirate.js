@@ -33,7 +33,6 @@
           Requester.get('content/chunks/inspirate', {}).then(function(data){
               ContentUtils.setType('');
               vm.content = ContentUtils.getProcessedData(data);
-              console.log(vm.content)
             }, function(){
 
             });

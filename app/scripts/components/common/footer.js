@@ -60,12 +60,14 @@
                                     list: [{
                                               url:'https://www.facebook.com/StudioBlackJeans/',
                                               label: '',
-                                              class:'icon rounded medium fa-facebook'
+                                              class:'icon rounded medium fa-facebook',
+                                              target: '_blank'
                                             },
                                             {
                                               url: 'https://instagram.com/studioblack.jeans',
                                               label:'',
-                                              class: 'icon rounded medium fa-instagram'
+                                              class: 'icon rounded medium fa-instagram',
+                                              target: '_blank'
                                             }
                                           ]
 

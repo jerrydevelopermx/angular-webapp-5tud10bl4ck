@@ -1,15 +1,15 @@
 <div flex layout="column" class="menu-bar">
  <md-content flex layout="row">
     <a href="#!/"><div class="logo" id="logo-div"></div></a>
-    <md-nav-bar flex md-selected-nav-item="$ctrl.currentNav" hide-xs hide-sm hide-md>
+    <md-nav-bar aria-label="menu-navbar" flex md-selected-nav-item="$ctrl.currentNav" hide-xs hide-sm hide-md>
      <md-nav-item md-nav-href="#!/mujeres" name="mujeres">Mujeres</md-nav-item>
      <md-nav-item md-nav-href="#!/hombres" name="hombres">Hombres</md-nav-item>
      <md-nav-item md-nav-href="#!/inspirate" name="inspirate">Inspírate</md-nav-item>
-     <md-nav-item md-nav-href="#!/guia" name="guia">Guia de tallas</md-nav-item>
+     <md-nav-item md-nav-href="#!/guia" name="guia">Guía de tallas</md-nav-item>
      <md-nav-item md-nav-href="#!/mayoreo" name="mayoreo">Venta Mayoreo</md-nav-item>
    </md-nav-bar>
-   <md-nav-bar flex show-xs hide-lg hide-md>
-     <md-button ng-click="$ctrl.toggleRight()" ng-hide="$ctrl.isOpenRight()" class="icon fa-bars sidemenu">
+   <md-nav-bar flex show-xs hide-lg hide-md aria-label="right-menu-navbar">
+     <md-button aria-label="toggle-button" ng-click="$ctrl.toggleRight()" ng-hide="$ctrl.isOpenRight()" class="icon fa-bars sidemenu">
      </md-button>
    </md-nav-bar>
 </md-content>
@@ -22,7 +22,7 @@
         <li><a href="#!/mujeres" ng-class="{'leftnavbar-selected': $ctrl.currentNav == 'mujeres' }" ng-click="$ctrl.menuClicked()">Mujeres</a></li>
         <li><a href="#!/hombres" ng-class="{'leftnavbar-selected': $ctrl.currentNav == 'hombres' }" ng-click="$ctrl.menuClicked()">Hombres</a></li>
         <li><a href="#!/inspirate" ng-class="{'leftnavbar-selected': $ctrl.currentNav == 'inspirate' }" ng-click="$ctrl.menuClicked()">Inspírate</a></li>
-        <li><a href="#!/guia" ng-class="{'leftnavbar-selected': $ctrl.currentNav == 'guia' }" ng-click="$ctrl.menuClicked()">Guia de tallas</a></li>
+        <li><a href="#!/guia" ng-class="{'leftnavbar-selected': $ctrl.currentNav == 'guia' }" ng-click="$ctrl.menuClicked()">Guía de tallas</a></li>
         <li><a href="#!/mayoreo" ng-class="{'leftnavbar-selected': $ctrl.currentNav == 'mayoreo' }" ng-click="$ctrl.menuClicked()">Venta Mayoreo</a></li>
     </ul>
       <!-- <md-button ng-click="close()" class="md-primary">

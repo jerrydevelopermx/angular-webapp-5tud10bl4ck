@@ -12,7 +12,7 @@ angular.module('webApp')
     contentType = type;
   }
 
-  function processData(data){ console.log(data)
+  function processData(data){ 
     var content = [];
     if((contentType != 'demoCatalog')){
       for(var att in data){
