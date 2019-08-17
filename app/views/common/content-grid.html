@@ -22,7 +22,7 @@
               </div>
               <div><span class="product-attr">Modelo:</span> <span class="product-code">{{tile.code}}</span></div>
               <div><span class="product-attr">Color:</span> <span class="product-color">{{tile.color}}</span></div>
-              <div><span class="product-attr">Precio:</span> <span class="product-price">${{tile.price}}</span></div>
+              <div><span class="product-attr">Precio:</span> <span class="product-price">$ {{tile.price | number:2}}</span></div>
               <div><span class="product-attr">Tallas disponibles:</span>  <span class="product-sizes"> {{tile.sizes}}</span></div>
               <div><a href ng-click="$ctrl.openGuideDialog(tile.code, tile.img)"> Guía de tallas </a></div>
             </md-card-content>
