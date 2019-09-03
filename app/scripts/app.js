@@ -19,8 +19,7 @@ angular
   ])
 
   .constant('APP',{
-    'api_url' : 'http://da46bf8e.ngrok.io/web-content-api/index.php/', //'http://studioblackjeans.com/studioblackjeans-api/index.php/',//'http://localhost/web-content-api/index.php/',
-    'images_repo' : 'https://ancient-island-69990.herokuapp.com/'
+    'api_url' : 'http://studioblackjeans.com/studioblackjeans-api/index.php/'//'http://localhost/web-content-api/index.php/'//'http://localhost/web-content-api/index.php/',
   })
 /*
   .run(function($rootScope) {
