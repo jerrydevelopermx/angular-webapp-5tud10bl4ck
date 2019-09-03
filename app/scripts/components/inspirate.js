@@ -30,7 +30,7 @@
 
         vm.$onInit = function(){
           anchorScroll();
-          Requester.get('content/chunks/inspirate', {}).then(function(data){
+          Requester.get('content/chunks_page/inspirate', {}).then(function(data){
               ContentUtils.setType('');
               vm.content = ContentUtils.getProcessedData(data);
             }, function(){

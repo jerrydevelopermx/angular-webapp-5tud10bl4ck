@@ -29,7 +29,7 @@
 
         vm.$onInit = function(){
           anchorScroll();
-          Requester.get('content/chunks/nosotros', {}).then(function(data){
+          Requester.get('content/chunks_page/nosotros', {}).then(function(data){
              ContentUtils.setType('');
               vm.content = ContentUtils.getProcessedData(data);
               //console.log(vm.content)

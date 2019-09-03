@@ -22,7 +22,7 @@
         vm.$onInit = function(){
           vm.contactFormMessage = 'Descubre las novedades, productos y promociones que tenemos para ti o aclara cualquier duda que tengas.';
 
-          Requester.get('content/chunks/home', {}).then(function(data){
+          Requester.get('content/chunks_page/home', {}).then(function(data){
               ContentUtils.setType('');
               vm.content = ContentUtils.getProcessedData(data);
               vm.content[1].bottom = {

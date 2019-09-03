@@ -16,7 +16,7 @@
         vm.showCarousel = false;
 
         vm.$onInit = function(){
-          Requester.get('catalog/galleries/' + vm.parent, {}).then(function(data){
+          Requester.get('catalog/galleries_page/' + vm.parent, {}).then(function(data){
               vm.images = processGallery(data);
             }, function(error){
                 console.log(error)

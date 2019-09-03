@@ -24,7 +24,7 @@
         }
 
         function getStyles(){
-          Requester.get('catalog/styles/' + vm.type, {}).then(function(data){
+          Requester.get('catalog/styles_gender/' + vm.type, {}).then(function(data){
             vm.styles = data;
             vm.selectedStyle = data[0];
             getProducts();
@@ -32,7 +32,7 @@
         }
 
         function getProducts(){
-          Requester.get('catalog/products/' + vm.selectedStyle.style_id, {}).then(function(data){
+          Requester.get('catalog/products_style/' + vm.selectedStyle.style_id, {}).then(function(data){
             processProducts(data);
           }, function(){});
         }
