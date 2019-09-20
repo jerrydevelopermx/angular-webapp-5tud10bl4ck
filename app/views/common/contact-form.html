@@ -41,12 +41,15 @@
           </md-input-container>
         </div>
         <div layout="column" layout-align="center center" layout-padding layout-margin>
-          <div vc-recaptcha key="'6LdCcrkUAAAAAHJ6CRQUcjxyIRHUYM3l0pyXuzZe'" lang="es" ng-model="$ctrl.contact.myRecaptchaResponse"></div>
-          <div class="pink-content" ng-show="$ctrl.emailSent"><h2>¡Gracias, a la brevedad nos comunicaremos contigo!</h2></div>
-
+          <div vc-recaptcha key="'6LeqcrkUAAAAANXu7s-8-XUg1cBWpsQDXVpGRL6H'" lang="es" ng-model="$ctrl.contact.myRecaptchaResponse"></div>
           <ul class="actions">
             <li><input value="Enviar" class="button medium" type="submit" ng-click="$ctrl.sendEmail()" ng-disabled="!$ctrl.contactForm.$valid"></li>
             </ul>
+        </div>
+        <div layout="column" layout-align="center center" layout-padding layout-margin>
+          <div class="pink-content" ng-show="$ctrl.emailSent">
+            <h2>¡Gracias, a la brevedad nos comunicaremos contigo!</h2>
+          </div>  
         </div>
       </form>
   </div>
