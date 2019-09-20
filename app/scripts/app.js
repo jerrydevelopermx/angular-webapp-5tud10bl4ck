@@ -19,7 +19,7 @@ angular
   ])
 
   .constant('APP',{
-    'api_url' : 'http://studioblackjeans.com/studioblackjeans-api/index.php/'//'http://localhost/web-content-api/index.php/'//'http://localhost/web-content-api/index.php/',
+    'api_url' : 'http://studioblackjeans.com/studioblackjeans-api/index.php/'
   })
 /*
   .run(function($rootScope) {

@@ -5,29 +5,44 @@
   <p style="color: #000" class="centered">{{$ctrl.message}}</p>
 <div layout="column" layout-align="center center">
 
-    <form flex="66" action="#">
+    <form name="$ctrl.contactForm" novalidate flex="66">
         <div flex layout="row" layout-md="column" layout-xs="column" layout-margin layout-fill>
-             <div flex >
-                <input name="name" id="name" value="" placeholder="Nombre" type="text">
-              </div>
-              <div flex >
-                <input name="email" id="email" value="" placeholder="Apellidos" type="text">
-              </div>
+             <md-input-container flex="50" flex-xs="45" flex-md="45" md-no-float layout="column">
+                <input name="name" id="name" placeholder="Nombre" type="text" required ng-model="$ctrl.contact.name">
+                <div flex ng-messages="$ctrl.contactForm.name.$error">
+                  <div ng-message="required">Campo requerido</div>
+                </div>
+              </md-input-container>
+              <md-input-container flex="50" flex-xs="45" flex-md="45" md-no-float layout="column">
+                <input name="apellidos" id="apellidos" value="" placeholder="Apellidos" type="text" required ng-model="$ctrl.contact.lastname">
+                <div flex ng-messages="$ctrl.contactForm.apellidos.$error">
+                  <div ng-message="required">Campo requerido</div>
+                </div>
+              </md-input-container>
         </div>
         <div flex layout="row" layout-md="column" layout-xs="column" layout-margin layout-fill>
-             <div flex>
-                <input name="state" id="name" value="" placeholder="Teléfono" type="text">
-              </div>
-              <div flex>
-                <input name="email" id="email" value="" placeholder="Correo electrónico" type="email">
-              </div>
+              <md-input-container flex="50" flex-xs="45" flex-md="45" md-no-float layout="column">
+                <input name="phone" id="phone" placeholder="Teléfono" type="text" ng-model="$ctrl.contact.phone">
+              </md-input-container>
+              <md-input-container flex="50" flex-xs="45" flex-md="45" md-no-float layout="column">
+                <input name="email" id="email" placeholder="Correo electrónico" required  type="email" ng-model="$ctrl.contact.email">
+                <div flex ng-messages="$ctrl.contactForm.email.$error">
+                  <div ng-message="required">Campo requerido</div>
+                  <div ng-message="email">Email no válido</div>
+                </div>
+              </md-input-container>
         </div>
-        <div flex layout="column" layout-fill layout-margin>
-             <textarea name="message" id="message" placeholder="Mensaje" rows="3"></textarea>
+        <div flex layout="column" style="padding: 0 10px">
+          <md-input-container flex flex-xs="45" flex-md="45" md-no-float layout="column">
+             <textarea name="message" id="message" placeholder="Mensaje" rows="4" required ng-model="$ctrl.contact.message"></textarea>
+             <div flex ng-messages="$ctrl.contactForm.message.$error">
+               <div ng-message="required">Campo requerido</div>
+             </div>
+          </md-input-container>
         </div>
         <div layout="row" layout-align="center center" layout-padding layout-margin>
           <ul class="actions">
-            <li><input value="Enviar" class="button medium" type="submit" disabled></li>
+            <li><input value="Enviar" class="button medium" type="submit" ng-click="$ctrl.sendEmail()" ng-disabled="!$ctrl.contactForm.$valid"></li>
             </ul>
         </div>
       </form>

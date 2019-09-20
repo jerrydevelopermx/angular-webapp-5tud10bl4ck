@@ -16,8 +16,12 @@ angular.module('webApp')
     return defer.promise;
   }
 
-  function postRequest(){
-
+  function postRequest(api, params){
+    var defer = $q.defer();
+    $http.post(APP.api_url + api, params).then(function(result) {
+        defer.resolve(result.data);
+    });
+    return defer.promise;
   }
 
 });

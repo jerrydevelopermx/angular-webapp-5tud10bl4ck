@@ -3,13 +3,22 @@
     angular.module('webApp')
 
     .component('contactForm', {
-        bindings: {
-          message: '=',
-        },
         templateUrl: 'views/common/contact-form.html',
         controller: componentController
       })
 
-      function componentController($scope,$anchorScroll,$location){}
+      function componentController(Requester){
+        let vm = this;
+
+        vm.sendEmail = function() {
+          Requester.post('content/email', vm.contact).then(function(data){
+            vm.emailSent = true;
+          }, function(){
+
+          });
+
+        }
+
+      }
 
 })();
