@@ -40,7 +40,10 @@
              </div>
           </md-input-container>
         </div>
-        <div layout="row" layout-align="center center" layout-padding layout-margin>
+        <div layout="column" layout-align="center center" layout-padding layout-margin>
+          <div vc-recaptcha key="'6LdCcrkUAAAAAHJ6CRQUcjxyIRHUYM3l0pyXuzZe'" lang="es" ng-model="$ctrl.contact.myRecaptchaResponse"></div>
+          <div class="pink-content" ng-show="$ctrl.emailSent"><h2>¡Gracias, a la brevedad nos comunicaremos contigo!</h2></div>
+
           <ul class="actions">
             <li><input value="Enviar" class="button medium" type="submit" ng-click="$ctrl.sendEmail()" ng-disabled="!$ctrl.contactForm.$valid"></li>
             </ul>

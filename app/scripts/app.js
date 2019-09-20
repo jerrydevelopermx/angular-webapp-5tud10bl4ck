@@ -15,11 +15,12 @@ angular
       'ngMessages',
       'nemLogging',
       'ngSanitize',
-      'ui.carousel'
+      'ui.carousel',
+      'vcRecaptcha'
   ])
 
   .constant('APP',{
-    'api_url' : 'http://studioblackjeans.com/studioblackjeans-api/index.php/'
+    'api_url' : 'http://localhost/web-content-api/index.php/'//'http://studioblackjeans.com/studioblackjeans-api/index.php/',
   })
 /*
   .run(function($rootScope) {
