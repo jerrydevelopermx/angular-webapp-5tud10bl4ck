@@ -10,7 +10,8 @@
     "angular-ui-carousel": "^0.1.10",
     "angular-route": "^1.7.5",
     "angular-sanitize": "^1.7.8",
-    "angular-recaptcha": "^4.2.0"
+    "angular-recaptcha": "^4.2.0",
+    "angular-google-analytics": "^1.1.9"
   },
   "resolutions": {
     "angular": "1.7.2"

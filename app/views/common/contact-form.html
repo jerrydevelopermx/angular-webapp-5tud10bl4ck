@@ -46,12 +46,12 @@
             <li><input value="Enviar" class="button medium" type="submit" ng-click="$ctrl.sendEmail()" ng-disabled="!$ctrl.contactForm.$valid"></li>
             </ul>
         </div>
-        <div layout="column" layout-align="center center" layout-padding layout-margin>
-          <div class="pink-content" ng-show="$ctrl.emailSent">
-            <h2>¡Gracias, a la brevedad nos comunicaremos contigo!</h2>
-          </div>  
-        </div>
       </form>
+      <div layout="column" layout-align="center center" layout-padding layout-margin>
+        <div ng-show="$ctrl.emailSent">
+          <h2>¡Gracias, a la brevedad nos comunicaremos contigo!</h2>
+        </div>
+      </div>
   </div>
 
 </div>

@@ -41,7 +41,7 @@
         vm.changeWomanProduct = function(product){
           vm.womanImage = product.image;
           vm.womanSelectedProduct = product.code;
-          Requester.get('guide/sizes/' + product.code, {}).then(function(data){
+          Requester.get('guide/sizes/' + product.product_id, {}).then(function(data){
             vm.womanSizes = data;
           }, function(){});
         }
@@ -49,14 +49,14 @@
         vm.changeManProduct = function(product){
           vm.manImage = product.image;
           vm.manSelectedProduct = product.code;
-          Requester.get('guide/sizes/' + product.code, {}).then(function(data){
+          Requester.get('guide/sizes/' + product.product_id, {}).then(function(data){
             vm.manSizes = data;
           }, function(){});
         }
 
         function getData(){
           Requester.get('guide/styles', {}).then(function(data){
-            processData(data)
+            processData(data);
           }, function(){});
 
         }

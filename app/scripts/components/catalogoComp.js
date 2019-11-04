@@ -49,7 +49,7 @@
         function getImgs(data){
           var imgs = [];
           for(var i in data){
-            imgs.push({backgroundColor : '#fff', img: data[i].front_image, url:'', class: 'producto', code: data[i].code, price: data[i].price, color: data[i].color, sizes : data[i].sizes });
+            imgs.push({backgroundColor : '#fff', img: data[i].front_image, url:'', class: 'producto', code: data[i].code, product_id:data[i].product_id, price: data[i].price, color: data[i].color, sizes : data[i].sizes });
           }
           return imgs;
         }

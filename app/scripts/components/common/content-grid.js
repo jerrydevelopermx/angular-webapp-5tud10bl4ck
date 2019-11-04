@@ -32,7 +32,7 @@
                 $ctrl.sizes = [];
                 $ctrl.code = product_id;
                 $ctrl.guideImage = (image.indexOf('woman') !== -1) ? 'guia-mujer.jpg' : 'guia-hombre.jpg';
-                Requester.get('catalog/sizes/'+ $ctrl.code, {}).then(function(data){
+                Requester.get('catalog/sizes_product/'+ $ctrl.code, {}).then(function(data){
                   $ctrl.sizes = data;
                 }, function(){});
 
