@@ -12,6 +12,13 @@ body {
   font-size: 11pt;
 }
 
+md-content.md-default-theme, md-content {
+  background-color: #fff;
+}
+body.md-default-theme, body, html.md-default-theme, html  {
+  background-color: #fff;
+}
+
 .menu-bar md-content{
   background-color: #000;
   color: #fff;

@@ -19,7 +19,7 @@
         //  console.log(vm.data)
         }
 
-        vm.openGuideDialog = function(product_id, image) {
+        vm.openGuideDialog = function(product_id, code, image) {
             $mdDialog.show({
               controllerAs: '$ctrl',
               bindToController: true,
@@ -30,9 +30,9 @@
               controller: function($mdDialog, Requester) {
                 var $ctrl = this;
                 $ctrl.sizes = [];
-                $ctrl.code = product_id;
-                $ctrl.guideImage = (image.indexOf('woman') !== -1) ? 'guia-mujer.jpg' : 'guia-hombre.jpg';
-                Requester.get('catalog/sizes_product/'+ $ctrl.code, {}).then(function(data){
+                $ctrl.code = code;
+                $ctrl.guideImage = (image.indexOf('mujer') !== -1) ? 'guia-mujer.jpg' : 'guia-hombre.jpg';
+                Requester.get('catalog/sizes_product/'+ product_id, {}).then(function(data){
                   $ctrl.sizes = data;
                 }, function(){});
 
@@ -44,7 +44,7 @@
             })
         };
 
-        vm.openGalleryDialog = function(product_id) {
+        vm.openGalleryDialog = function(product_id, code) {
             $mdDialog.show({
               controllerAs: '$ctrl',
               bindToController: true,
@@ -55,9 +55,9 @@
               controller: function($mdDialog, Requester) {
                 var $ctrl = this;
                 $ctrl.sizes = [];
-                $ctrl.code = product_id;
+                $ctrl.code = code;
                 $ctrl.selectedImage = {};
-                Requester.get('catalog/product_images/' + $ctrl.code, {}).then(function(data){
+                Requester.get('catalog/product_images/' + product_id, {}).then(function(data){
                   $ctrl.images = data;
                   $ctrl.selectedImage = data[0];
                 }, function(){});
