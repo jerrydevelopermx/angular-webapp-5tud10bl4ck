@@ -22,7 +22,7 @@ angular
 
   .constant('APP',{
     //'api_url' : 'http://studioblackjeans.com/studioblackjeans-api/index.php/',
-    'api_url' : 'http://dfcc3518.ngrok.io/web-content-api/index.php/',//'http://studioblackjeans.com/studioblackjeans-api/index.php/',,
+    'api_url' : 'http://edd3e0c9.ngrok.io/web-content-api/index.php/',//'http://studioblackjeans.com/studioblackjeans-api/index.php/',,
   })
 
   .config(function (AnalyticsProvider) {
