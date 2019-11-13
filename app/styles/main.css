@@ -110,6 +110,9 @@ body.md-default-theme, body, html.md-default-theme, html  {
     img.tallas-img{
       width: 220px;
     }
+    .product-img{
+      max-width:340px
+    }
     .styles-div{
       margin-top: 15px;
       border-right:  solid 2px #2a2a2a;
@@ -245,7 +248,7 @@ body.md-default-theme, body, html.md-default-theme, html  {
       width: 100%;
     }
     .product-img{
-      width:250px
+      max-width:250px
     }
 
     .styles-div{

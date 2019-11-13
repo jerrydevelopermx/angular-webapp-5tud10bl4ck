@@ -30,8 +30,8 @@
               controller: function($mdDialog, Requester) {
                 var $ctrl = this;
                 $ctrl.sizes = [];
-                $ctrl.code = code;
-                $ctrl.guideImage = (image.indexOf('mujer') !== -1) ? 'guia-mujer.jpg' : 'guia-hombre.jpg';
+                $ctrl.code = code; console.log(image)
+                $ctrl.guideImage = (image.indexOf('woman') !== -1) ? 'guia-mujer.jpg' : 'guia-hombre.jpg';
                 Requester.get('catalog/sizes_product/'+ product_id, {}).then(function(data){
                   $ctrl.sizes = data;
                 }, function(){});
